@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Development </title>
+    <link rel="icon"  type="image/png" href="logo (1).png"/>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        main {
+            padding: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        
+        /* Video Card Styling */
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            background: #c6cbec;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            text-align: center; /* Center-align text and video */
+        }
+        
+        .video-card iframe {
+            width: 60%; /* Smaller width for the video */
+            height: auto; /* Adjust height proportionally */
+            border-radius: 8px;
+            margin: 0 auto; /* Center the video horizontally */
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        .video-info h2 {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            color: #2e0f47;
+        }
+        .video-info p {
+            font-size: 0.9rem;
+            text-align: justify;
+            color: #5f4f63;
+        }
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .video-card {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .video-card iframe {
+                width: 50%;
+                height: 200px;
+                margin-right: 15px;
+            }
+            .video-info {
+                flex: 1;
+            }
+        }
+       
+       
+ .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #c6cbec;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+header { 
+  color: black;
+  padding: 20px;
+  text-align: center;
+  /* background: #d4c5c5; */
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #2e0f47;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  color: #5f4f63;
+}
+
+.video-content {
+  padding: 20px;
+}
+
+.video-content article {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #2e0f47;
+  border-radius: 5px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #a88fbf;
+}
+
+.video-content article:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.video-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2e0f47;
+}
+
+.video-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #5f4f63;
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-brands fa-square-js" style=" font-size: 24px;"></i>
+            </div>
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <div class="nav-buttons">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="course.html"><button class="course-button">Courses</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>  
+    <body>
+        <div class="container">
+          <header>
+            <h1>JavaScript</h1>
+            <p>This series of videos provides a comprehensive introduction to JavaScript, perfect for beginners and intermediate learners alike. Each video is carefully crafted to explain essential concepts of JavaScript programming, progressively building up the knowledge needed to work on real-world projects.</p>
+          </header>
+          <main>
+            <section class="video-content">
+              <article>
+                <h2>JavaScript Unveiled: From Basics to Building Interactive Web Applications</h2>
+                <p>This JavaScript video series offers a detailed introduction to the language, beginning with its role in web development and its interaction with HTML and CSS. 
+                    It explains JavaScript's significance in both front-end and back-end development. The series covers fundamental concepts such as variable declarations (var, let, const),
+                     data types like numbers, strings, and booleans, and operators including arithmetic, comparison, and logical operators. Control flow statements (if, else, switch) and loops 
+                     (for, while, do-while) are explored to help manage program flow and repetitive tasks. Functions are covered
+                     extensively, detailing their definition, argument handling, and return values, alongside insights into regular, arrow, and anonymous functions.</p>
+                     <p>Additionally, the series dives into arrays and their methods, string manipulation techniques, and working with objects. Important JavaScript concepts 
+                        like hoisting are explained for a better understanding of code execution. Event handling and form management demonstrate how JavaScript responds to user 
+                        interactions, while DOM manipulation illustrates how to dynamically update web page content and styles. Synchronous and asynchronous functions are also 
+                        covered, emphasizing how JavaScript manages timing and handles tasks like Promises. The series concludes with a to-do list project 
+                        that combines all the learned concepts into a practical application, helping learners build interactive, real-time web interfaces with JavaScript.</p>
+              </article>
+            </section>
+          </main>
+        </div>
+
+
+
+
+
+    <main>  
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/w2B-b5E47Lw"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>JavaScript Introduction</h2>
+                <p><strong>Introduction to JavaScript: History, Functionality, and Syntax</strong>
+                     we explore JavaScript, a versatile programming language used for both server-side and frontend development. We discuss how JavaScript works in web browsers and on servers via environments like Node.js. The video also delves into the history of JavaScript, its evolution, and its significance in modern web development. Additionally, we introduce JavaScript's syntax, including variables, functions, and basic structures, setting a foundation for further learning.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/23nJsNbgu_Q"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Variables and Datatypes</h2>
+                <p><strong>Understanding Variables and Data Types in JavaScript</strong>
+                     we dive deep into variables and data types in JavaScript. We explain how to declare variables using var, let, and const, and the scope and use cases for each. The video also covers JavaScript's data types, including primitive types like strings, numbers, booleans, null, undefined, and symbols, as well as reference types like objects and arrays. Through examples, we demonstrate how to effectively use variables and understand type-related behaviors in JavaScript.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/7INGvFMYSvA"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Operators</h2>
+                <p><strong>JavaScript Operators Explained</strong>
+                 we explore the various operators in JavaScript and their functionality. We discuss arithmetic operators for calculations, assignment operators for value assignment, comparison operators for evaluating conditions, logical operators for combining expressions, and bitwise operators for low-level computations. Additionally, we cover the use of the ternary operator for concise conditional expressions. Through examples, we demonstrate how to use these operators effectively in different scenarios.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/0gWHG4ZHmRw"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Variable and Datatypes</h2>
+                <p><strong>Hands-On Practice with Variables and Data Types in JavaScript</strong>
+                     we explore variables and data types in JavaScript with practical examples. We cover var, let, and const, their scope, and use cases. The video also explains primitive types like string, number, boolean, and complex types like object and array, with hands-on demonstrations of type conversion and best practices.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/3hwL2Ptf5-M"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Operators </h2>
+                <p><strong>JavaScript Operators Explained</strong>
+                     we dive into the various operators in JavaScript, including arithmetic, comparison, logical, assignment, and bitwise operators. Practical examples illustrate how these operators work and how they are used to perform calculations, make decisions, and manipulate data in JavaScript programs.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/sZi0Xy_nLk4"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Control Flow Statements</h2>
+                <p><Strong>Control Flow Statements in JavaScript </Strong>
+                    This video covers JavaScript control flow statements, including conditional statements (if, else if, else, switch) for decision-making and loops (for, while, do...while) for repetitive tasks. We demonstrate how these statements control the execution flow of a program with practical examples.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/_dbXTge4wOk"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Function</h2>
+                <p><Strong>Functions in JavaScript - Detailed Explanation </Strong>
+                    we explore functions in JavaScript, explaining their structure and how they work. We discuss function declaration, function expressions, and arrow functions. The video also covers how functions can accept parameters, return values, and be invoked. Through practical examples, we demonstrate the concept of scope, closures, and higher-order functions.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/JaDe50HS6ak"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Arrays</h2>
+                <p><strong>Introduction to Arrays in JavaScript</strong>
+                   we cover the basics of arrays in JavaScript. We explain how arrays are used to store multiple values in a single variable and discuss their syntax. The video also highlights how to access, modify, and iterate over array elements. Through examples, we demonstrate the usage of common array methods like push(), pop(), shift(), and unshift(), along with how to check the length of an array.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/DaVcrCc2BFk"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Arrays Continuation</h2>
+                <p><strong>Advanced Arrays in JavaScript</strong>
+                    This video explores advanced array concepts in JavaScript, covering methods like map(), filter(), and reduce(), as well as multi-dimensional arrays. It also explains array manipulation techniques using forEach(), sort(), reverse(), and splice(), with practical examples for efficient data handling.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/p97Fd1ra0nE"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>String & Objects</h2>
+                <p><strong>Strings and Objects in JavaScript</strong>
+                    we explore JavaScript strings and objects in detail. We cover string manipulation methods such as slice(), substring(), replace(), and split(), along with string interpolation and template literals. The video also delves into JavaScript objects, explaining how to create, access, and modify object properties. Key concepts like object methods, this, and prototypes are discussed, providing a thorough understanding of how to work with strings and objects effectively in JavaScript.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/mS7UUp913Jc"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Strict mode, Hosting, Events</h2>
+                <p><strong>Strict Mode, Hoisting, and Events in JavaScript</strong>
+                    This video covers strict mode, hoisting, and events in JavaScript. Strict mode enforces stricter rules to catch errors, hoisting explains how variable and function declarations are moved to the top, and events demonstrate how to handle user interactions like clicks and key presses using event listeners.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/F1fNYmBR1po"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Forms</h2>
+                <p><Strong>Forms in JavaScript </Strong>
+                    we explore working with forms in JavaScript. We discuss how to access form elements, handle form submission, and validate user input. Additionally, we cover how JavaScript can be used to manipulate form data and prevent default form behavior, providing examples of common form operations.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Xr82nWktIQ0"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>DOM, Synchronous & Asynchronous Functions</h2>
+                <p><Strong>DOM, Synchronous & Asynchronous Functions in JavaScript</Strong>
+                    we discuss the Document Object Model (DOM) and how JavaScript interacts with it to manipulate HTML elements. We also explore synchronous and asynchronous functions, explaining how synchronous functions execute in sequence, while asynchronous functions allow other tasks to run concurrently. The video demonstrates how to handle asynchronous operations using callbacks, promises, and async/await.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/29ugj-VwRSI"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Project</h2>
+                <p><Strong>JavaScript TODO List Project with Operations</Strong>
+                    we walk through creating a simple JavaScript TODO List project that allows users to add, mark as completed, and delete tasks. We explain how to manage tasks using JavaScript by manipulating the DOM, handling user input, and storing tasks dynamically. The video demonstrates key operations like adding new tasks to the list, striking through completed tasks, and removing tasks, making the TODO List interactive and functional.</p>
+            </div>
+        </div>
+
+    </main>    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Navigation Links -->
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Information -->
+        <div class="footer-contact" id="Contact">
+            <h3 >Contact Me</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;font-weight: bold; color: #3c096c;">
+                Email: 
+                <a href="mailto:shaaikayesha519@gmail.com" 
+                   style="color:#3c096c; text-decoration: none; font-weight: bold;">
+                  shaaikayesha519@gmail.com
+                </a>
+              </p>
+        </div>
+    
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <a href="https://x.com/Ayesha_shaaik"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ayeshashaaik/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom" style="color: #3c096c;">
+            <p>&copy; 2024 Java Full Stack Web Development.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

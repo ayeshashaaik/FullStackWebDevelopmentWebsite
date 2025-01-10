@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Development </title>
+    <link rel="icon"  type="image/png" href="logo (1).png"/>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+h1{
+    margin: 0;
+    font-size: 2.8rem;
+    color: #2e0f47;
+}
+
+main {
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+    color: #5f4f63;
+}
+
+
+/* Video Card Styling */
+.video-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #c6cbec;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center; /* Center-align text and video */
+}
+
+.video-card iframe {
+    width: 60%; /* Smaller width for the video */
+    height: auto; /* Adjust height proportionally */
+    border-radius: 8px;
+    margin: 0 auto; /* Center the video horizontally */
+}
+
+.video-info {
+    padding: 20px;
+}
+.video-info h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    color: #2e0f47;
+}
+.video-info p {
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.context-section {
+            width: fit-content;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #c6cbec;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+.context-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #5f4f63;
+}
+
+.context-section p strong {
+            font-size: 1.1rem;
+            color: #2e0f47;
+        }
+
+        .topics-list {
+            list-style-type: disc;
+            margin: 15px 0;
+            padding-left: 20px;
+            height: fit-content;
+        }
+
+        .topics-list li {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #5f4f63;
+        }
+
+        .topics-list li:hover {
+            color: #2e0f47;
+            font-weight: bold;
+        } 
+
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .video-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .video-card iframe {
+        width: 50%;
+        height: 200px;
+        margin-right: 15px;
+    }
+    .video-info {
+        flex: 1;
+    }
+}
+
+
+/* Parent Circle*/
+.circle {
+    display: flex;
+    width: 450px;
+    height: 450px;
+    border: 2px solid black; 
+    border-radius: 50%; 
+    position: relative; 
+    margin: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 800px;
+    margin-top: -550px;
+    margin-right: 1500px;
+    transform: translateX(-50%);
+}
+
+
+.c2 {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+} 
+
+
+.c3 {
+    width: 350px;
+    height: 350px;
+    border: 2px solid black; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center c4 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+
+.c4 {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* c5 - Nested Circle */
+.c5 {
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* c6 - Nested Circle */
+.c6 {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* c7 - Innermost Circle */
+.c7 {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+.image {
+    position: absolute;
+    width: 90px; /* Image container size */
+     height: 90px;
+    border-radius: 50%; /* Makes images round */
+    overflow: hidden;
+
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Makes the image itself round */
+}
+
+#html { top: 140%; left: 50%; transform: translateX(-50%); } /* HTML at the top */
+ #java { top: 80%; left: 135%; transform: translateY(-50%); }/* Java at the right */
+#sql { top: 120%; left: -65%; transform: translate(-50%, -100%); }/* SQL at the bottom */
+ #js { top: -50%; left: 85%; transform: translateY(-50%); }/* JS at the left*/
+#css { top: -60%; left: -50%; }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .circle {
+        width: 300px;
+        height: 300px;
+        margin: 20px auto; /* Center the circle horizontally */
+        margin-top: 20px; /* Space below the list */
+        transform: translateX(0); /* Remove offset */
+    }
+
+    .c2 {
+        width: 260px;
+        height: 260px;
+    }
+
+    .c3 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .c4 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .c5 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .c6 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .c7 {
+        width: 90px;
+        height: 90px;
+    }
+
+    .image {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Adjust the positions of the labels for the circles */
+    #html {
+        top: -105px;
+        left: 70%;
+        transform: translateX(-50%);
+    }
+
+    #java {
+        top: 50%;
+        left: 180%;
+        transform: translate(-50%, -50%);
+    }
+
+    #sql {
+        top: 215%;
+        left: 90%;
+        transform: translate(-50%, -100%);
+    }
+
+    #js {
+        top: 0%;
+        left: -80%;
+        transform: translate(-50%, -50%);
+    }
+
+    #css {
+        top: 80%;
+        left: -90%;
+    }
+}
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-brands fa-java" style="font-size: 24px;"></i> 
+            </div>
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <div class="nav-buttons" >
+                <a href="index.html" id="home">Home</a>
+                <a href="About.html">About</a>
+                <a href="#Contact">Contact</a>
+                <div class="dropdown">
+                    <a href="course.html"><button class="course-button">Courses</button></a>
+                </div>
+            </div>
+        </nav>
+    </header> 
+    
+    <div class="context-section">
+        <h1>Java</h1>
+        <p>
+            Java is a powerful, versatile, and widely-used programming language designed to build robust, 
+            secure, and platform-independent applications. Known for its "Write Once, Run Anywhere" 
+            capability, Java enables developers to create programs that can run seamlessly across different systems.
+            Its object-oriented design fosters code reusability and modularity, making it a preferred choice for developing 
+            everything from mobile apps to large-scale enterprise systems. 
+        </p>
+    
+        <p><strong>Here’s a clear and concise list of the topics covered in the videos:</strong></p>
+        <ul class="topics-list">
+            <li>Introduction to Computers</li>
+            <li>Features of Java</li>
+            <li>Object Orientation</li>
+            <li>Main Method</li>
+            <li>Data Types</li>
+            <li>Variables</li>
+            <li>Operators</li>
+            <li>Methods</li>
+            <li>Arrays</li>
+            <li>Strings</li>
+            <li>Method Overloading</li>
+            <li>Encapsulation</li>
+            <li>Constructors</li>
+            <li>Static</li>
+            <li>Inheritance</li>
+            <li>Access Modifiers</li>
+            <li>Polymorphism</li>
+            <li>Abstraction</li>
+            <li>Interfaces</li>
+            <li>Exception Handling</li>
+            <li>Multi-Threading</li>
+            <li>Collections</li>
+            <li>Maps</li>
+            <li>File Handling</li>
+            <li>Serialization & Deserialization</li>
+        </ul>
+        <div class="parent">
+        <div class="circle">
+            <div class="c2">
+                <div class="c3">
+                    <div class="c4">
+                          <div class="c5">
+                            <div class="c6">
+                                <div class="c7">
+                                    <div class="image" id="js"><img src="js.png" alt="js image" width="80px"></div>
+                                  <div class="image" id="html"><img src="html.jpg" alt="html image" width="80px"></div>  
+                                  <div class="image" id="css"><img src="css.webp" alt="css image" width="80px"></div>
+                                  <div class="image" id="sql"><img src="mysql.png" alt="sql image" width="80px" ></div>
+                                  <div class="image" id="java"><img src="images.png" alt="java image" width="80px"></div>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                 </div>
+            </div> 
+        </div>
+    </div>
+    </div>
+
+    <main>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/GvzL5YQlyOg
+            " title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Course Introduction</h2>
+                <p><strong>Welcome to the Course Introduction for Java Full Stack Development! </strong>
+                 we’ll provide an overview of Java Full Stack Development, 
+                    including the flowchart outlining the steps to complete the course. You’ll 
+                    learn about the key components of the stack: frontend, backend, and database 
+                    technologies. Additionally, we’ll discuss the benefits of mastering this course 
+                    and how it can boost your career in software development. Let’s get started!"</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/IlvtpGW1VzI" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Evolution of HLL</h2>
+                <p> <strong>Understanding Computer Fundamentals:</strong>
+                    This video covers the basics of computer systems, including microprocessors, 
+                    programming languages (MLL, ALL, HLL), and storage devices like RAM and hard drives. 
+                    We discuss their types, advantages, and disadvantages—perfect for building a strong tech foundation!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/TUCz4MgKX-0" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Portability</h2>
+                <p><strong>Exploring Java Features and Its Evolution : </strong> we discuss key features of Java, 
+                    including portability, WORA, architectural neutrality, and platform independence
+                     versus dependence. We also explore the history of programming languages like C, C++, 
+                     and Java, highlighting their differences and how Java has evolved to become a versatile 
+                     and powerful language. Gain insights into Java's unique capabilities and its role in modern
+                      programming.</p>
+            </div>
+        </div>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/9I-EyRIsoLI" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Object Orientation</h2>
+                <p><strong>Understanding Object-Oriented Programming (OOP) in Java :</strong>
+                    This video simplifies OOP concepts, explaining 'object' and 'orientation'
+                     with relatable examples. Learn the basics of classes, objects, states, and behaviors, 
+                     illustrated using a car, virus, and computer. We also demonstrate creating a class 
+                     and object in Java with a practical car example. Perfect for beginners!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/mLJ6Ll1m3vg" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Main Method</h2>
+                <p> <strong>Java Main Method and First Program Execution  : </strong>
+                     we explore the Java main method, breaking down public static 
+                     void main(String[] args) in detail. Learn how to write your first Java program to
+                      print "Hello, World!" and understand the process of Java program execution step by step.
+                       A perfect starting point for beginners!</p>
+            </div>
+        </div>
+        
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/cmtmDzFdKaU" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Pattern Programming</h2>
+                <p> <strong>  Pattern Programming with Loops in Java : </strong>
+                    we dive into pattern programming using loops, focusing on the syntax and 
+                    structure of the for loop. We create a square pattern program with rows 
+                    and columns, where the border is filled with *. Additionally, we tackle 
+                    more complex patterns to enhance your understanding of loop concepts in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/lycTFPHEneA" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Pattern Programming</h2>
+                <p> <strong>Pattern Programming with Loops in Java :</strong>
+                   we explore pattern programming using loops, covering the syntax and 
+                   structure of the for loop. We create a square pattern program with rows 
+                   and columns, where the border is filled with *. Additionally, we discuss
+                    more complex patterns, including a reverse triangle pattern with different 
+                    angles, to deepen your understanding of loop concepts in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/HchtxW1nJ_s" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Data Types</h2>
+                <p> <strong> Understanding Data Types in Java : </strong>
+                   we explore Java data types, covering both primitive and non-primitive types.
+                    We dive into numeric data types, explaining their characteristics and usage
+                     with hands-on examples. Perfect for understanding how to work with different
+                      data types in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/xjUPRgfw4AA" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Char Data Type</h2>
+                <p> <strong> Primitive and Non-Numerical Data Types in Java :</strong>
+                    In this video, we discuss primitive non-numerical data types in Java, 
+                    along with their storage capacities. We also explore the range of these
+                     data types, solving problems to understand their practical applications 
+                     and limits. A key video for mastering data types in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/8I1QO9A4sEY" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Type Casting</h2>
+                <p> <strong>Type Casting and Wrapper Classes in Java : </strong> 
+                   we cover type casting in Java, explaining both implicit and explicit casting.
+                    We also dive into wrapper classes, and explore post and pre-increment/decrement 
+                    operations with practical examples. A comprehensive guide for understanding type 
+                    conversion and increment/decrement operations in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/OG6Woq5MO00" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Code Snippets</h2>
+                <p><strong>Type Conversion and Increment/Decrement in Java : </strong>
+                    we discuss converting one data type to another in Java, 
+                    along with practical examples. We also cover pre/post increments and decrements, 
+                    solving various problems to help you understand how these operations work in different 
+                    scenarios. A hands-on guide to mastering type conversion and increments in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/iTDHE-ekHIQ" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Variables</h2>
+                <p><strong>Variables, Memory Allocation, and Passing Data in Java :</strong>
+                   we explore variables in Java, including how they are stored in 
+                    different segments of the Java Runtime Environment (JRE). We also discuss the 
+                    concepts of pass-by-value and pass-by-reference, solving problems to demonstrate 
+                    how data is passed in Java. A great video for understanding variable storage and 
+                    data passing in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ScoKcqd6fNA" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Methods</h2>
+                <p> <strong>Methods and Their Types in Java : </strong>
+                   we explore different types of methods in Java, including how to handle 
+                    various input and output scenarios. We provide hands-on examples to demonstrate method 
+                    usage, helping you understand the concepts of method parameters, return types, and method 
+                    calls in real-world applications. A practical guide to mastering methods in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/mQwj-1LlJ6g" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Arrays</h2>
+                <p><strong>Understanding Arrays in Java : </strong>
+                  we dive into arrays in Java, explaining their syntax and structure in detail.
+                   Through practical examples, we demonstrate how to declare, initialize, and manipulate arrays,
+                    providing a clear understanding of how to work with them in Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Bwo-kh3ucFw" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>1D, 2D, 3D - Regular Arrays</h2>
+                <p> <strong>Arrays in Java: Hands-On Practice : </strong>
+               we take a deeper dive into arrays with practical, problem-solving examples. We work through various 
+               challenges to reinforce your understanding of array manipulation, helping you gain hands-on experience 
+               in using arrays effectively in Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/np2-mCTkAH0" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Jagged Arrays </h2>
+                <p><Strong>Understanding Jagged Arrays in Java : </Strong>
+                 we explore jagged arrays in Java, covering their declaration and syntax in detail. We explain how jagged arrays differ from regular arrays and demonstrate their usage through examples of 1D, 2D, and 3D jagged arrays. Learn how to work with these flexible data structures through clear program explanations!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Slpuugv5RuE" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Jagged Arrays Continuation</h2>
+                <p> <strong>Jagged Arrays and Their Drawbacks in Java : </strong>
+                     we continue exploring jagged arrays by solving various problems and demonstrating their applications. We also discuss the drawbacks of arrays, including limitations related to size and flexibility, helping you understand when and why jagged arrays might be more suitable for certain scenarios.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/AuAlm5j01vc" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Arrays Continuation</h2>
+                <p> <strong>Advanced Jagged Arrays in Java: Examples and Drawbacks : </strong>
+                    we revisit jagged arrays with new examples, including 1D, 2D, and 3D jagged arrays. We solve different problems to further illustrate their use cases and explore the drawbacks of arrays, focusing on the limitations and challenges when working with jagged arrays in Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/pGYQmzpU7_Y" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Strings</h2>
+                <p><strong> 
+                    Understanding Strings in Java : </strong>
+                  we explore what strings are in Java and discuss the two main types: mutable and immutable strings. We explain how strings work in Java, focusing on their characteristics and the concept of immutability. Gain a clear understanding of string handling and manipulation in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/2AlzxQOdhPo" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Strings Continuation</h2>
+                <p> <strong>Mastering Strings in Java :</strong>
+               we dive deeper into strings, focusing on creating immutable strings and various ways to compare them. We discuss how strings are stored in memory and demonstrate string concatenation techniques. A comprehensive guide to understanding and working with strings in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/bXa9dE_yhaI" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2> String Continuation</h2>
+                <p>
+                    <strong> String Comparison in Java: All Possible Methods. </strong>
+                  we explore the various ways to compare strings in Java, covering all possible cases with detailed explanations. Through practical examples and problem-solving, you'll gain a thorough understanding of string comparison techniques and their applications in Java programming..</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/GAvR_ovsGe4" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Mutable Strings</h2>
+                <p><strong>
+                    Exploring Mutable Strings in Java : </strong>
+                  we focus on mutable strings in Java, demonstrating their usage through practical programs. We explore built-in methods, provide an introduction to StringBuffer and StringBuilder, and explain their syntax and basic operations. A must-watch for understanding mutable string handling in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/XFbzh4MIiDs" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>String Continuation</h2>
+                <p><strong>String and StringBuffer Methods in Java : </strong>
+                 we delve into the different methods available for String and StringBuffer in Java. Through hands-on programs, we demonstrate their usage and highlight their practical applications. A great resource for mastering string manipulation techniques in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/iCVssLwNFLg" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Video Title 24</h2>
+                <p><strong> String Tokenizer, Split Method, and Method Overloading in Java : </strong>
+                  we cover the complete concept of StringTokenizer and the split method, demonstrating their usage through various examples. Additionally, we explain the syntax and application of the while loop. To wrap up, we introduce the basics of method overloading in Java, providing a comprehensive understanding of these topics!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ptY1gdyxQHo" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Method Overloading Continuation</h2>
+                <p><strong>Deep Dive into Method Overloading : </strong>
+                we explore method overloading in detail, delving into compile-time polymorphism, static binding, and early binding concepts. We also discuss the substring method, explaining its functionality through practical examples. A thorough guide to understanding these fundamental Java concepts!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Krc36PeaOHc" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Encapsulation</h2>
+                <p>
+                    <strong> Understanding Encapsulation in Java : </strong>
+                   we cover the basics of Object-Oriented Programming (OOP) with a focus on encapsulation. We explain the use of private access modifiers, and how to implement setters and getters, using practical examples like a bank application. Different scenarios are discussed to solidify your understanding of encapsulation in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/GO7cFiv4jRk" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Encapsulation Continuation</h2>
+                <p><Strong>Encapsulation in Java: Additional Examples </Strong>
+                   we build on the concept of encapsulation by exploring more examples and scenarios. Through practical implementations, we reinforce the use of private variables, setters, and getters, helping you gain a deeper understanding of encapsulation in Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/bfGgY73iKGA" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Local Chaining</h2>
+                <p> <strong>Local Chaining and POJO Classes in Java : </strong>
+                we explore the concept of local chaining with various examples, demonstrating how methods can invoke each other within a class. Additionally, we discuss the basics of POJO (Plain Old Java Object) classes, their structure, and their importance in Java programming. Perfect for mastering foundational concepts!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ufJbisF_3cg" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Encapsulation Programming</h2>
+                <p><strong> Encapsulation and Constructors in Java : </strong>
+                    we dive deeper into encapsulation with a focus on constructors. Learn how to define private variables, use constructors effectively, and access private variables through getters and setters. A comprehensive guide to mastering encapsulation in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/W-EX_5aNb8c" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Static Introduction</h2>
+                <p><strong> Transitioning from Encapsulation to Static in Java : </strong>
+                    we conclude the topic of encapsulation and begin exploring the concept of static in Java. Learn what static means, its importance, and how to use it in programs. We also discuss why the main method is static and how it works. A foundational lesson for understanding static members in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/kSi7-2cvoMc" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Static </h2>
+                <p><strong>
+                    In-Depth Understanding of Static in Java : </strong>
+                  we delve into the workings of static in Java, explaining how it compiles and is stored in different segments of the JRE, including the metaspace, stack, and heap segments. We cover static variables, methods, and blocks, discussing their behavior and how they interact with instance variables. Additionally, we explain the execution process and how these elements are managed in memory. A comprehensive guide to mastering static in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/0CLs4Z0S0z4" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Statics Methods & Blocks </h2>
+                <p><strong>Static Rules and Flow of Execution in Java : </strong>
+                   we explain the rules governing static in Java and the flow of execution for static and non-static members. Through practical programs, we demonstrate the behavior of static members, their interaction with non-static members, and the complete set of rules for using static effectively. Perfect for solidifying your understanding of static in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/3D8WiepnxX4" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Inheritance Introduction</h2>
+                <p><strong>Static Methods, Blocks, and an Introduction to Inheritance in Java : </strong>
+
+                   we cover static methods and blocks in depth, highlighting key points to remember with various program examples. Additionally, we introduce the concept of inheritance in Java, explaining it through practical examples. A must-watch for understanding static concepts and stepping into inheritance!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/411L3cKC21U" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Type of Inhheritance</h2>
+                <p><Strong>Understanding Inheritance in Java: Types and Advantages </Strong>
+                   we explore the concept of inheritance, its definition, and its advantages, supported by practical code examples. We also discuss the six types of inheritance in Java, explaining each type in detail to give you a comprehensive understanding of this foundational OOP concept!
+                </p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/MFzeYe5rGv4" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Constructor Chaining</h2>
+                <p> <strong>Constructor Chaining and Method Inheritance in Java : </strong> 
+                   we explore constructor chaining, where the parent method is in one class and the child method is in another. We explain the process through four different cases of methods in inheritance, demonstrating how constructor chaining works with practical examples. A detailed guide to understanding this key OOP concept!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/do8UG_Qy2XU" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Access Modifiers</h2>
+                <p><strong>Inheritance Methods and Access Modifiers in Java : </strong>
+                  we provide another example of different types of methods in inheritance, demonstrating their use in real-world scenarios. We also discuss access modifiers—public, protected, default, and private—and explain how their accessibility works in Java, both within and outside class hierarchies. A comprehensive guide to inheritance and access control in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/2tm6wPV3s8M" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Rules of Method Overloading</h2>
+                <p><strong>Rules of Method Overloading in Java : </strong>
+                  we explain the rules of method overloading in Java, with clear examples and practical programs. Learn how to correctly overload methods and understand the key principles that govern this concept, including method signature differences, return types, and parameter types.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/v1xOGwAkPwM" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Final Keyword </h2>
+                <p><Strong>Understanding the final Keyword in Java : </Strong>
+                    we explore how the final keyword works in Java, covering its use with methods, variables, and classes through practical examples. We also explain the toString method, its purpose, and how it can be overridden to provide a custom string representation of objects.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Xq2jGxs59lI" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Polymorphism</h2>
+                <p><strong>Understanding Polymorphism in Java with the Plane Example : </strong>
+                    we dive into the concept of polymorphism in Java, explaining how it allows objects of different types to be treated as objects of a common supertype. We illustrate this with a practical example using a Plane class, showing how method overriding and dynamic method dispatch work in polymorphism.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/5iPKL8yTyPE" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>polymorphism - Upcasting & Downcasting</h2>
+                <p>
+                    <strong>Advantages of Polymorphism and Upcasting/Downcasting in Java : </strong>
+                    we explore the advantages of polymorphism, including flexibility and code reusability, with practical examples. We also discuss upcasting and downcasting in polymorphism, explaining how objects can be treated as instances of their parent or child class, and the implications of each casting type.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/2eklGNXi6iw" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Aggregation & Composition</h2>
+                <p><strong>Aggregation vs Composition in Java with UML Diagrams :</strong>
+                    we explain the concepts of Aggregation and Composition in Java, illustrating their differences through real-world examples. We use UML diagrams to demonstrate the relationship between a charger, mobile, and operating system (OS). Practical programs help solidify the understanding of how these concepts work in object-oriented design.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/TkoX3jBMaqU" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Abstraction Introduction</h2>
+                <p><strong>Introduction to Abstraction in Java : </strong>
+                 we introduce the concept of abstraction in Java, explaining its purpose and how it works. We cover abstract methods and abstract classes, demonstrating how they allow for partial implementation and enforce subclass-specific implementations. This foundational video helps you understand the key principles of abstraction in object-oriented programming.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/2hn5NilUHvs" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Abstraction Eagle Example</h2>
+                <p><strong>Abstract Keyword and Interface in Java : </strong>
+                   we delve deeper into the abstract keyword with another example, explaining how it works in Java. We also introduce interfaces—what they are and how they differ from abstract classes. Using practical examples, we demonstrate the use of interfaces and how they define contracts for classes to implement.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/l-klYLcrvBs" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Rules of Interfaces[Calculator Interface]</h2>
+                <p><strong>
+                    Detailed Explanation of Interface Rules in Java : </strong>
+               we cover the rules of interfaces in Java in detail. Each rule is explained with practical examples, showcasing how interfaces are declared, implemented, and used in programs. This video provides a clear understanding of the structure and constraints of interfaces in Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/XJz0U6W6omU" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Rules of Interfaces</h2>
+                <p><strong>
+                    Detailed Explanation of Interface Rules in Java : </strong>
+               we cover the rules of interfaces in Java in detail. Each rule is explained with practical examples, showcasing how interfaces are declared, implemented, and used in programs. This video provides a clear understanding of the structure and constraints of interfaces in Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/kRiQgb9fasQ" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>JDK 8 and 9 Features</h2>
+                <p><strong>Exploring Interfaces with JDK Features in Java : </strong>
+                    we delve into interfaces in Java, focusing on their evolution with various JDK features. We discuss how interfaces have been enhanced over time and explore their unique characteristics compared to other constructs in Java. Learn how interfaces contribute to modern Java development.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/4tDlsuTU_6g" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Function Interface and Lambda Expression</h2>
+                <p><strong>Functional Interfaces in Java: A Comprehensive Guide </strong>
+                 we explore functional interfaces in Java, focusing on their unique trait of having a single abstract method. We demonstrate the implementation of functional interfaces using classes, inner classes, anonymous inner classes, and lambda expressions. This video provides practical insights into leveraging functional interfaces for concise and efficient coding.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Vxm0wVfDFvc" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Exception Handling</h2>
+                <p><strong>Introduction to Exception Handling in Java : </strong>
+                    we cover the fundamentals of exception handling in Java. We explain the difference between exceptions and syntax errors, highlighting their causes and impacts. Through practical examples, we demonstrate how exceptions are managed and handled effectively in Java programs.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/XBzOrIAlMFQ" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Different Exception and there handling</h2>
+                <p><Strong>
+                    Handling Exceptions in Java with Try and Catch : </Strong>
+                    This video demonstrates how to handle exceptions in Java using the try and catch blocks. We explore various scenarios to understand how exceptions occur and how to manage them effectively. Learn to write robust programs by addressing potential runtime errors with practical examples.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/cb_ei0pkET4" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Single try, Multile catch</h2>
+                <p><Strong> Types of Exceptions in Java with Examples : </Strong>
+               we discuss different types of exceptions that can occur in Java programs, such as ArrayIndexOutOfBoundsException, InputMismatchException, and NegativeArraySizeException. Additionally, we explore default exceptions and user-defined exceptions, explaining their causes and providing practical examples to illustrate each case.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/7YJLbOXqV-c" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Different ways of handling an exception </h2>
+                <p><strong>Comprehensive Guide to Handling Exceptions in Java : </strong>
+                    we explore various ways to handle exceptions in Java. Learn different techniques, including try-catch blocks, multiple catch clauses, the finally block, and exception propagation. We dive deep into practical examples to demonstrate how to manage exceptions effectively in real-world scenarios.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/-YLWn-_N-TA" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Different ways of arise a Problem in Exceptions</h2>
+                <p><strong>Understanding Errors and Exceptions in Java </strong>
+                     we discuss the two key problems that can arise during Java program execution: runtime errors and exceptions. We explain when and why they occur, and dive into the differences between checked and unchecked exceptions. This foundational knowledge is essential for writing robust and error-free Java programs.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/TGsN3jliozI" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Exception Hierarchy </h2>
+                <p><Strong>
+                    Understanding Exception Hierarchy in Java : </Strong>
+                    we explore the flowchart of the "Exception Hierarchy" in Java, explaining how it works and its structure. We also cover some built-in methods in the Exception class, such as printStackTrace() and getMessage(), demonstrating their usage in handling and troubleshooting exceptions effectively.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Eob--y5AuMw" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Custom Exception </h2>
+                <p><Strong>Understanding Custom Exceptions in Java : </Strong>
+                   we explain what custom exceptions are, how they work, and how to create them in Java. We walk you through the process of defining a custom exception class and using it to handle specific error scenarios in your program, with clear and simple examples for better understanding.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/UT7X7jxh0r8" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>MultiThreading</h2>
+                <p><Strong>
+                    Mastering Exception Handling and Multithreading in Java </Strong>
+                     we cover the valid and invalid syntax for try, catch, and finally blocks in Java. We also explain the difference between throw and throws with practical examples. Moving on, we introduce multithreading, discussing processes and tasks, multitasking types like Single Thread Operating System (STOS) and Multi-Thread Operating System (MTOS), along with their advantages and disadvantages. Perfect for gaining a comprehensive understanding of exception handling and multitasking in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/5H88vKSwOtY" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Creating Multithreading</h2>
+                <p><strong>Efficient Multithreading: CPU Time Management and Multiplexing in Java</strong>
+                    we explore how multithreading in Java can lead to CPU time loss and demonstrate strategies to minimize it. We explain the concept of multiplexing, showing how Java efficiently handles multiple threads to optimize task execution. Through practical programs, we illustrate key techniques to achieve effective multiplexing and manage CPU resources efficiently.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/otffnCNlFBk" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>implements Runnable</h2>
+                <p> <Strong>Achieving Multiplexing in Java with Runnable Implementation : </Strong>
+                    we demonstrate how to achieve multiplexing in Java by implementing the Runnable interface. We discuss the advantages of using Runnable over extending Thread and provide a step-by-step explanation of the implementation process. Through practical examples, you'll learn how to efficiently manage multiple threads and optimize task execution in a Java program.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/jRbOEOeVF7s" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Multithreading with 1 run method</h2>
+                <p><Strong>Multithreading in Java Using a Single run() Method</Strong>
+                   we explore the concept of multithreading in Java by utilizing a single run() method. We demonstrate how to create and manage threads that share a common task, explaining the flow of execution in detail. Using practical examples, you'll understand how a single run() method can handle multiple threads efficiently to achieve parallel processing. Perfect for learning thread management in Java!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/z5oZ93MRPoc" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Daemon threads</h2>
+                <p><strong>Types of Threads in Java: User Threads and Daemon Threads</strong>
+                    we delve into the two main types of threads in Java: User Threads and Daemon Threads. We discuss their characteristics, how they differ, and their roles in a Java application. A special focus is given to Daemon Threads, explaining their purpose, lifecycle, and practical use cases with examples. Learn how to implement and manage these thread types effectively in your programs!</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/MMGNxxvDFbc" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Synchronization</h2>
+                <p><strong>Multithreading with Synchronization & join() in Java </strong>
+                    we cover multithreading in Java, focusing on synchronization to ensure thread safety when accessing shared resources, and the join() method, which allows one thread to wait for another to finish. Through examples, you'll learn how to manage thread execution order effectively in Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/aMgjwQEjvbE" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Synchronized block </h2>
+                <p><strong>Synchronization Block & Life Cycle of Thread in Java </strong>
+                    we dive into synchronization blocks in Java and the thread life cycle. We explain how synchronization blocks ensure thread safety when multiple threads access shared resources. Additionally, we cover the thread life cycle, detailing the various states a thread goes through during its execution. Through examples, you will understand how to manage thread synchronization and track the thread's journey from creation to termination in Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/kgy_yG-tKL0" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Thread life cycle </h2>
+                <p><strong>Life Cycle of a Thread in Java</strong> 
+                    we cover the life cycle of a thread in Java, detailing its various states: New (thread is created but not started), Runnable (thread is ready to run), Blocked (waiting for access to a resource), Waiting (waiting indefinitely for another thread), Timed Waiting (waiting for a specific time), and Terminated (execution is complete or thread terminated). Through examples, we demonstrate how threads transition between these states during their life cycle.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/yRmjBpepqg8" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Producer consumer Problem </h2>
+                <p>"Producer-Consumer Problem in Java"
+
+                    This video covers the Producer-Consumer problem, where one thread (producer) creates data and stores it in a shared buffer, and another thread (consumer) retrieves and processes the data. We demonstrate how to use synchronization techniques to ensure thread safety and prevent race conditions in a program example.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/dIoRewGpU8E" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Collections Framework Introduction</h2>
+                <p><strong>Introduction to the Collections Framework in Java</strong>
+
+                    This video gives a quick overview of the Java Collections Framework, designed to efficiently store, retrieve, and manipulate groups of objects. It introduces key components like lists, sets, maps, and queues, along with their common implementations such as ArrayList, HashSet, and HashMap. The video emphasizes how the Collections Framework simplifies coding, boosts performance, and enhances functionality in Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/6WmH-630rSk" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>ArrayList</h2>
+                <p> <strong>ArrayList in java</strong>
+                 we explore the ArrayList class in Java, focusing on its creation methods, properties, and key features. We discuss dynamic resizing, advantages like easy element access, and disadvantages such as slower insertions/deletions. The video also covers essential methods like add(), get(), remove(), and size() for managing elements in an ArrayList.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/oTcfrTGwieo" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>ArrayList</h2>
+                <p> <strong>ArrayList in java</strong>
+                    we explore the ArrayList class in Java, focusing on its creation methods, properties, and key features. We discuss dynamic resizing, advantages like easy element access, and disadvantages such as slower insertions/deletions. The video also covers essential methods like add(), get(), remove(), and size() for managing elements in an ArrayList.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/fEELSCR7PsE" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Linked List</h2>
+                <p><strong>LinkedList in Java</strong>
+                     we cover the LinkedList class in Java, focusing on its creation, properties, advantages, and disadvantages. We explain how to create a LinkedList using constructors and initialization, highlighting its dynamic structure and efficiency for insertions and deletions. The advantages include fast insertions and deletions at both ends, while disadvantages involve slower access times compared to ArrayLists. We also explore key methods like add(), remove(), get(), and size(), demonstrating their use with examples.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/8XcD8DhWSGg" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Linked List</h2>
+                <p><strong>LinkedList in Java</strong>
+                    we cover the LinkedList class in Java, focusing on its creation, properties, advantages, and disadvantages. We explain how to create a LinkedList using constructors and initialization, highlighting its dynamic structure and efficiency for insertions and deletions. The advantages include fast insertions and deletions at both ends, while disadvantages involve slower access times compared to ArrayLists. We also explore key methods like add(), remove(), get(), and size(), demonstrating their use with examples.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/j55H64Wc93s" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>ArrayDeque</h2>
+                <p>This video explains the ArrayDeque class in Java, a double-ended queue offering efficient insertion and removal of elements from both ends. It outperforms other collections like LinkedList and ArrayList for queue operations. Key properties like dynamic resizing are covered, along with methods such as add(), remove(), peek(), and poll(). The video discusses its advantages, including improved performance for frequent queue operations, and its limitations.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/fR_JgaJe5fk" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>TreeSet</h2>
+                <p>we explore the TreeSet class in Java, focusing on its implementation of the Set interface using a red-black tree. We discuss how TreeSet ensures uniqueness and automatic sorting of elements, along with efficient operations like adding, removing, and searching. The video also highlights advantages such as fast retrieval and sorting, as well as limitations like the lack of null elements. Common methods like add(), remove(), and contains() are demonstrated through examples.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/_LV6hHDRYiI" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>HashSet</h2>
+                <p>
+                    This video covers the HashSet class in Java, part of the Java Collections Framework. It ensures uniqueness by disallowing duplicates and is backed by a hash table for efficient operations like add(), remove(), and contains() with constant time complexity. However, it does not maintain order. The video discusses its advantages, such as fast lookups, and disadvantages, like the lack of order and possible performance issues during iterations. Additionally, HashSet allows one null element.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/cUR4nBxPiHY" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Hashmap</h2>
+                <p>
+                    This video covers the HashMap class in Java, explaining how it stores key-value pairs with unique keys using a hash table. It provides efficient operations like put(), get(), and remove(). While HashMap allows null keys and values, it does not guarantee element order. The video highlights its advantages, such as fast lookups, and its limitations, including potential hash collision issues.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/GX_cUbEH8qY" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Generics</h2>
+                <p>we explore Generics in Java, a powerful feature that allows for type safety and reusability in code. Generics enable you to write classes, interfaces, and methods with type parameters, so you can define and use them with different data types without losing compile-time type checks. The video covers how to declare and use generics, including generic classes, methods, and bounded types, and discusses the benefits, such as preventing runtime errors and enhancing code clarity. Examples demonstrate how generics work with collections like ArrayList and HashMap.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/MtKrkssrGsw" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Sorting</h2>
+                <p>
+                    In this video, we discuss sorting in Java, covering methods like Arrays.sort() and Collections.sort(). We explore how the Comparator and Comparable interfaces enable custom sorting, and demonstrate sorting algorithms with an emphasis on choosing the right one based on data and performance needs.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/4MciIKIzg9k" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Comparable interface</h2>
+                <p> we discuss the Comparable interface in Java, which is used to define the natural ordering of objects. The Comparable interface requires the implementation of the compareTo() method, which compares the current object with another object of the same type. We explain how this interface is used for sorting collections like lists and arrays. The video also covers real-world examples, demonstrating how to implement the compareTo() method for custom objects and the benefits of using Comparable for efficient sorting.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Z6ADKY25zjA" 
+            title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Comparable interface</h2>
+                <p> we discuss the Comparable interface in Java, which is used to define the natural ordering of objects. The Comparable interface requires the implementation of the compareTo() method, which compares the current object with another object of the same type. We explain how this interface is used for sorting collections like lists and arrays. The video also covers real-world examples, demonstrating how to implement the compareTo() method for custom objects and the benefits of using Comparable for efficient sorting.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" >
+        <div class="footer-container" >
+            <!-- Navigation Links -->
+            <div class="footer-nav" >
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                </ul>
+            </div>
+    
+             <!-- Contact Information -->
+        <div class="footer-contact" id="Contact">
+            <h3 >Contact Me</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;font-weight: bold; color: #3c096c;">
+                Email: 
+                <a href="mailto:shaaikayesha519@gmail.com" 
+                   style="color:#3c096c; text-decoration: none; font-weight: bold;">
+                  shaaikayesha519@gmail.com
+                </a>
+              </p>
+        </div>
+    
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <a href="https://x.com/Ayesha_shaaik"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ayeshashaaik/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom" style="color: #3c096c;">
+            <p>&copy; 2024 Java Full Stack Web Development.</p>
+        </div>
+    </footer>
+    
+        <script src="script.js"></script>
+
+
+       
+        
+</body>
+</html>

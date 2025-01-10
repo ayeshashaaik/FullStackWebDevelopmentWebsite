@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Development </title>
+    <link rel="icon"  type="image/png" href="logo (1).png"/>
+
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.courses-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #c6cbec;
+   
+    margin-bottom: 40px;
+}
+
+.courses-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2e0f47;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    justify-content: center; /* Centers the cards */
+    gap: 20px; /* Spacing between cards */
+}
+
+/* Card Styling */
+.card {
+    background-color: #a88fbf;
+    color: #5f4f63;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45%; /* Each card takes 45% of the container width */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #2e0f47;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.card-button {
+    background-color: #2e0f47;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-button:hover {
+    background-color: #3c096c;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Cards will take full width on smaller screens */
+    }
+}    
+
+
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <div class="nav-buttons" >
+                <a href="index.html" id="home">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="course.html"><button class="course-button">Courses</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="courses-section">
+            <h2><strong>Our Courses</strong></h2>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>Core Java</h3>
+                    <p>Learn the fundamentals of Java programming, including OOP concepts, data structures, and exception handling.</p>
+                    <a href="java.html"><button class="card-button">View Course</button></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>Advanced Java</h3>
+                    <p>Master advanced Java topics like JDBC, Servlets, Spring Framework, and backend development.</p>
+                    <a href="advanced-java.html"><button class="card-button">View Course</button></a>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>HTML + CSS</h3>
+                    <p>Build stunning websites with HTML for structure and CSS for styling and responsiveness.</p>
+                    <a href="html.html"><button class="card-button">View Course</button></a>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <h3>JavaScript</h3>
+                    <p>Add interactivity to your websites with JavaScript, including DOM manipulation and events.</p>
+                    <a href="javascript.html"><button class="card-button">View Course</button></a>
+                </div>
+                <!-- Card 5 -->
+                <div class="card">
+                    <h3>MySQL</h3>
+                    <p>Learn the basics of database management, including queries, joins, and database design.</p>
+                    <a href="mysql.html"><button class="card-button">View Course</button></a>
+                </div>
+                <!-- Card 6 -->
+                <div class="card">
+                    <h3>Programming</h3>
+                    <p>Enhance your coding skills with hands-on projects and problem-solving techniques.</p>
+                    <a href="program.html"><button class="card-button">View Course</button></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer class="footer" >
+        <div class="footer-container" >
+            <!-- Navigation Links -->
+            <div class="footer-nav" >
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                </ul>
+            </div>
+    
+             <!-- Contact Information -->
+        <div class="footer-contact" id="Contact">
+            <h3 >Contact Me</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;font-weight: bold; color: #3c096c;">
+                Email: 
+                <a href="mailto:shaaikayesha519@gmail.com" 
+                   style="color:#3c096c; text-decoration: none; font-weight: bold;">
+                  shaaikayesha519@gmail.com
+                </a>
+              </p>
+        </div>
+    
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <a href="https://x.com/Ayesha_shaaik"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ayeshashaaik/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom" style="color: #3c096c;">
+            <p>&copy; Java Full Stack Web Development.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

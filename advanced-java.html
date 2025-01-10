@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Development </title>
+    <link rel="icon"  type="image/png" href="logo (1).png"/>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+main {
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Video Card Styling */
+.video-card {
+    display: flex;
+    flex-direction: column;
+    background: #c6cbec;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center; /* Center-align text and video */
+}
+
+.video-card iframe {
+    width: 60%; /* Smaller width for the video */
+    height: auto; /* Adjust height proportionally */
+    border-radius: 8px;
+    margin: 0 auto; /* Center the video horizontally */
+}
+
+.video-info {
+    padding: 20px;
+}
+.video-info h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    color: #2e0f47;
+}
+.video-info p {
+    font-size: 0.9rem;
+    text-align: justify;
+    color: #5f4f63;
+}
+/* Responsive Design */
+@media (min-width: 768px) {
+    .video-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .video-card iframe {
+        width: 50%;
+        height: 200px;
+        margin-right: 15px;
+    }
+    .video-info {
+        flex: 1;
+    }
+}
+
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #c6cbec;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.text-content {
+  flex: 1;
+  margin-right: 20px;
+  min-width: 300px; /* Ensures a minimum width for smaller screens */
+
+}
+
+.text-content h2 {
+  color: #2e0f47;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #5f4f63;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center-align text for smaller screens */
+  }
+
+  .text-content {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    margin-bottom: 20px; /* Add space below text content */
+  }
+
+  .image-content img {
+    max-width: 300px; /* Adjust the max width of the image */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h2 {
+    font-size: 1.5rem; /* Reduce heading size */
+  }
+
+  .text-content p {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .image-content img {
+    max-width: 250px; /* Further adjust the image size */
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <div class="nav-buttons" >
+                <a href="index.html" id="home">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="course.html"><button class="course-button">Courses</button></a>
+                </div>
+            </div>
+        </nav>
+    </header> 
+
+
+    <div class="content-section">
+        <div class="text-content">
+          <h2> Advanced Java Learning Platform</h2>
+          <p>This website is a dedicated learning hub for Advanced Java, offering video tutorials that cover a wide array of topics. It begins with foundational concepts
+             such as JDBC Introduction, JDBC Fetch Operations, and Coding Standards, leading to advanced database techniques like Meta Data, Batch Updates, and ACID 
+             Properties. Topics like Stored Procedures, Blob & Clob, and the DAO pattern provide insights into efficient data management.</p>
+          <p>Key design patterns, including Singleton and Factory, are explained for creating robust and scalable applications. The series transitions into enterprise
+             Java with an Introduction to JEE, covering File Interactions, Registration and Login Pages, and HTTP methods like doGet, doPost, and SendRedirect.</p>
+          <p>Tutorials on JSP explore advanced features like managing cookies, CRUD operations, and encrypting data while explaining the MVC Architecture. The series 
+            also provides an in-depth understanding of Hibernate, including CRUD Operations, mappings like 1:1, 1:M, and Many-to-Many, and integration with Servlets.</p>
+          <p>Framework tutorials introduce learners to Spring, with topics on Setter Injection, Spring ORM, Spring MVC, and Spring Boot, equipping them with the tools 
+            to build modern web applications. Finally, the series wraps up with a hands-on project—a Food Application App—that consolidates all concepts into a practical, 
+            real-world application.</p>
+        </div>
+        <div class="image-content">
+          <img src="Advancejava.png" alt="JavaScript Learning">
+        </div>
+    </div>
+    <main>  
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/3olUii5lxgM"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Introduction to JDBC</h2>
+            <p><strong>Introduction to JDBC</strong>
+                This video introduces JDBC (Java Database Connectivity), a core API in Java for connecting and interacting with databases. It explains the purpose of JDBC, its role in enabling seamless communication between Java applications and various databases, and its architecture. The video covers key components like the Driver Manager, Connection, Statement, and ResultSet, providing an overview of how JDBC simplifies database operations in Java applications.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/YdveF6Q9F94"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>JDBC Fetch Operations</h2>
+            <p><Strong>JDBC: 5 Steps to Execute SQL Code</Strong>
+                This video covers the five essential steps for using JDBC in Java: loading the driver to enable database interaction, establishing a connection via DriverManager, creating a SQL statement with Statement or PreparedStatement, executing the SQL statement (e.g., SELECT, INSERT), and processing the results using ResultSet. These steps are explained clearly to help you efficiently perform database operations.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/y0u3zuQv_kY"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>JDBC Coding standards</h2>
+            <p><Strong>PreparedStatement: Performing Delete, Update, and Insert Operations</Strong>
+                we delve into using the PreparedStatement in JDBC for executing SQL queries. We demonstrate coding operations like DELETE, UPDATE, and INSERT, highlighting how PreparedStatement provides a secure and efficient way to handle dynamic parameters in queries. The video includes practical examples, showcasing the ease and effectiveness of using PreparedStatement for database manipulations.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/cCPAiVg5weU"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Meta Data</h2>
+            <p><strong>Understanding Metadata in JDBC</strong>
+                we explore the concept of Metadata in JDBC and its significance. Metadata provides detailed information about the database structure, such as table names, column details, and data types. We discuss how to retrieve and utilize metadata using JDBC methods like DatabaseMetaData and ResultSetMetaData, with practical examples to demonstrate its applications in database-driven projects.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/1hu6mO3yPOQ"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Batch Update</h2>
+            <p><strong>Batch Updates in JDBC :</strong>
+                 Batch Updates in JDBC, an efficient way to execute multiple SQL statements in a single operation. We explain how to add multiple queries to a batch using the addBatch() method and execute them together with executeBatch(). Through practical examples, you will learn how batch updates improve performance, especially in scenarios involving repetitive database operations like inserts, updates, or deletes.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/W-LYFXJUipg"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Acid properties</h2>
+            <p><Strong>ACID properties : </Strong>
+                Atomicity, Consistency, Isolation, and Durability—ensure reliable database transactions. Atomicity ensures complete or no execution of transactions, preventing partial updates. Consistency maintains database validity, Isolation prevents interference between concurrent transactions, and Durability guarantees committed changes are permanent. These principles ensure data integrity and system reliability.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/sbiIoZ2qwXc"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Stored Procedures</h2>
+            <p>
+                <Strong>Understanding Stored Procedures in Advanced Java </Strong>
+                which are precompiled SQL queries stored within the database. We discuss their purpose, such as improving performance and reusability in database operations. The video explains how to define, call, and execute stored procedures using JDBC in Java. It also showcases examples of using stored procedures for tasks like inserting, updating, or fetching data, and highlights their benefits in terms of security, maintainability, and reducing client-server communication overhead.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/yCtTq2d30PM"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Blob & Clob </h2>
+            <p><strong>
+                Working with BLOB and CLOB in Advanced Java </strong>
+                This video focuses on handling BLOB (Binary Large Object) and CLOB (Character Large Object) data types in databases using Java. BLOB is used to store binary data like images, videos, and audio, while CLOB is used for storing large text data. The video explains how to insert, retrieve, and manipulate BLOB and CLOB data using JDBC. Through practical coding examples, viewers will learn to manage multimedia files and extensive text efficiently within database applications.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/YsaXUux9x2s"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Understanding DAO in Advanced Java</h2>
+            <p><strong>Creating Maven Projects and Understanding DAO in Advanced Java</strong>
+                we explore how to create a Maven project in Java, highlighting its role in managing dependencies and building applications efficiently. The video provides a step-by-step guide to setting up a Maven project in an IDE, including configuring the pom.xml file. Additionally, it introduces the Data Access Object (DAO) design pattern, explaining its significance in separating database interaction logic from business logic. Through coding demonstrations, viewers will learn to create a DAO layer for performing CRUD operations in a structured and maintainable manner.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/bHAGpHeCLSU"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>DAO Operations</h2>
+            <p>we explore the practical implementation of the Data Access Object (DAO) pattern, focusing on common CRUD operations: fetching all data, inserting new records, fetching specific data, and deleting records. The video demonstrates how to structure DAO methods to handle these tasks efficiently, using SQL queries for clean and maintainable database interactions.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/6P-r5FVuamA"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Singleton and Factory Design Patterns </h2>
+            <p>we delve into two essential design patterns: Singleton and Factory. The Singleton pattern ensures that a class has only one instance throughout the application and provides a global point of access to it. We explore how to implement this pattern in Java to maintain a single object throughout the application's lifecycle. Next, we discuss the Factory pattern, which provides an interface for creating objects but allows subclasses to alter the type of objects that will be created. This pattern promotes loose coupling and flexibility in object creation. Examples of both patterns are provided to demonstrate their practical applications in software development.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/GPAnmvzg1UE"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>JEE Introduction</h2>
+            <p><strong>Introduction to JEE and Installing Apache Tomcat</strong>
+
+                This video covers Java EE (Jakarta EE), a platform for building enterprise applications, explaining key components like Servlets, JSP, and EJB. It also demonstrates the installation and configuration of Apache Tomcat, a popular server for running Java web applications, and shows how to deploy a simple web app on Tomcat.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/QG9zt0ww5Wc"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>JEE Continuation</h2>
+            <p><Strong>Understanding web.xml, URL Mapping, and Servlet Mapping in JEE</Strong>
+
+                we dive into the role of the web.xml configuration file in Java EE (Jakarta EE) applications. We explain how to configure URL mapping and servlet mapping in web.xml, providing a clear understanding of how web requests are routed to the correct servlets. Additionally, we walk through the creation of the first JEE program, showcasing how servlets are mapped to URLs and how they handle client requests, including step-by-step coding examples and deployment. This video is perfect for beginners to understand the foundational concepts of web development in JEE.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/L3zp_3EIHmA"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>JEE File Interactions</h2>
+            <p><strong>JEE File Interactions Overview</strong>
+
+                This video covers how Java EE (Jakarta EE) applications handle files, focusing on file operations like reading, writing, and updating files. It explains Java IO streams and demonstrates file handling in web applications, such as uploading and downloading files. Practical examples also address file format management, storage, and security for sensitive data. A great resource for understanding file interactions in JEE-based web apps.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/XwK3W6IO14o"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Registration Page </h2>
+            <p><strong>
+                Creating a Registration Page in JEE</strong>
+                
+                This video demonstrates how to build a user registration page in a Java EE web application. It covers designing the front-end with HTML and CSS, handling form submissions with Java servlets, validating user inputs, and connecting to a database for storing registration details. The video also touches on security practices like password hashing and data validation, making it perfect for those looking to implement a registration system in a JEE environment.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/SCAz3z8rYFU"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>doGet, doPost and SendRedirect</h2>
+            <p><strong>Understanding doGet, doPost, and SendRedirect in Java Servlets</strong>
+                we explain the key methods in Java servlets: doGet, doPost, and SendRedirect. The doGet and doPost methods handle HTTP requests for retrieving and sending data, while SendRedirect allows redirecting to another URL or servlet. These methods help manage client-server communication and facilitate dynamic web applications by controlling data flow between pages.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/3Hv8fSfAR_s"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Login Page</h2>
+            <p><Strong>Creating a Login Page in JEE</Strong>
+                This video demonstrates how to build a login page in a Java EE (Jakarta EE) web application. It covers front-end design with HTML and CSS, and back-end processing using Java servlets for user authentication. The video explains validating user credentials against a database, managing sessions, and securing the login process with session management and cookies. It also includes redirecting users after successful login, providing a comprehensive guide for implementing a secure login system in JEE.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe
+            src="https://www.youtube.com/embed/idby5-q71yE"
+            title="Video 18"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+        <div class="video-info">
+            <h2>Introduction to JSP</h2>
+            <p>we introduce JavaServer Pages (JSP), a technology used for developing dynamic web applications in Java. JSP allows embedding Java code directly into HTML pages, making it easier to create dynamic content such as displaying user data, form handling, and interacting with databases. We explain how JSP works in a server environment, the lifecycle of a JSP page, and the role of servlets in processing requests. This video is essential for anyone looking to understand how JSP simplifies the development of web applications by separating logic from presentation.</p>
+        </div>
+    </div>
+    
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/TmvIqm6igRo"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Cookies with JSP</h2>
+            <p>we discuss how to use cookies in JSP (JavaServer Pages) to store and retrieve user-specific data across multiple sessions. Cookies are small pieces of data stored on the client-side and can be used to remember user preferences, authentication tokens, or track user activity. We demonstrate how to create, set, and read cookies within a JSP page, as well as how to manage cookie expiration and secure cookies. This video provides practical examples of implementing cookies in a JSP environment for tasks such as user login persistence and session tracking.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/412aETdrp6A"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>JSP Continuation</h2>
+            <p>This video covers the concept of JSP (JavaServer Pages) continuation, focusing on maintaining the state of a web application across multiple requests. It explains session management, request forwarding, and techniques like session attributes, request attributes, and hidden form fields for passing data between JSP pages. The video also touches on URL rewriting to manage user interactions in multi-page JSP applications, providing a clear understanding of creating stateful web applications in JSP.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/APYw1c5dlWQ"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Project p1 - Login Module</h2>
+            <p>we discuss the development of a Login Module project (Project P1) in a Java web application. The video walks through the entire process of building a secure login system, starting with designing the login page using HTML and CSS. It then covers handling form submissions through Java servlets, verifying user credentials against a database, and managing user sessions for authentication. Additionally, the video demonstrates how to implement error handling, redirecting users after a successful login, and securing passwords using techniques like hashing. By the end of the video, you'll have a fully functional and secure login module as part of a Java web application.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/-WuFFIKZSGs"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>JSP Continuation</h2>
+            <p>we explore how JSP (JavaServer Pages) creates dynamic web pages and manages sessions. The process is divided into three phases: Translation (converting the JSP file into a servlet), Compilation (compiling the servlet into bytecode), and Execution (running the servlet to generate dynamic content). We also discuss how JSP handles session management to maintain state across multiple requests, ensuring personalized user experiences. This includes using session attributes, cookies, and URL rewriting for seamless user interactions.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/iiYFRqJ7Ea0"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Project P2</h2>
+            <p>we explore how to enhance a web project by adding buttons and integrating them with dynamic functionality. The video demonstrates how to create buttons in HTML and associate them with backend actions using Java servlets or JavaScript. We cover common use cases such as submitting forms, navigating between pages, and triggering events. Additionally, the video explains how to handle button clicks with event listeners and how to update the UI dynamically based on user interactions. This is essential for improving the interactivity and usability of your web application.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/bIjSMHWGSnY"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>CRUD Operations</h2>
+            <p> we discuss the implementation of CRUD operations (Create, Read, Update, Delete) in a web application. The video walks through how to handle these basic operations using Java servlets and JSP, focusing on interacting with a database. We demonstrate how to create records, retrieve data, update existing records, and delete entries from a database using SQL queries. The video also covers the use of forms, buttons, and validation techniques to ensure smooth and secure data manipulation. This is a fundamental concept for building dynamic, data-driven web applications.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/5f1ki65yte4"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Project P3</h2>
+            <p>This video explains the development of a food ordering application using Java EE, covering features like user authentication, menu display, order placement, and payment processing. It highlights database management, session tracking, and creating user-friendly forms, demonstrating how to apply Java EE concepts in a real-world project.<p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/bQpgQSwQ1ZM"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Encrypting & Decrypting Data</h2>
+            <p>This video focuses on encrypting and decrypting data in Java EE applications. It covers the importance of securing sensitive information like passwords and personal data using encryption algorithms such as AES or RSA. The video provides coding examples for implementing encryption during data storage and decryption during retrieval, ensuring robust security for web applications.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/rKc6gaKK-IE"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Project P4</h2>
+            <p>This video provides a comprehensive walkthrough of a food application project using Java EE. It demonstrates building features like user registration, login, menu display, adding items to a cart, and placing orders. The project integrates servlets, JSP, and a database to handle back-end operations, ensuring seamless user interaction and functionality.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/nBX44fum8zA"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>MVC Architecture</h2>
+            <p>This video introduces the Model-View-Controller (MVC) architecture and its implementation in Java EE. It explains how MVC separates an application into three components: Model (data and business logic), View (user interface), and Controller (handles user input and updates the model/view). The video demonstrates creating a structured web application using servlets, JSP, and JavaBeans, emphasizing the benefits of maintainability, scalability, and clear separation of concerns.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/vg84gs-my40"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Hibernate Introduction</h2>
+            <p><strong>Introduction to Hibernate in Java</strong>
+                This video introduces Hibernate, an ORM framework for Java that simplifies database interactions by mapping Java objects to tables. It covers core features like configuration, session management, and CRUD operations, highlighting benefits such as portability, caching, and automatic schema generation, making it essential for Java developers working with relational databases.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/oKH2eTnO9qE"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Project P5</h2>
+            <p> 
+                This video highlights building distinct sections for restaurants, menus, and users in a food application. It covers managing restaurant details, dynamic menu updates, and user features like browsing and ordering. A modular approach ensures seamless integration and real-world functionality.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/gp34S55dgo8"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Hibernate CRUD</h2>
+            <p><strong>Hibernate CRUD Operations</strong>
+
+                This video focuses on performing CRUD (Create, Read, Update, Delete) operations using Hibernate. It explains configuring Hibernate, mapping entities, and interacting with the database through session methods. Practical examples demonstrate how to efficiently manage data in a Hibernate-powered application.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/lotIISlmGKs"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Project P6</h2>
+            <p><strong>Comprehensive Project Implementation</strong>
+
+                we delve into a complete project utilizing all the concepts learned so far, including Hibernate, servlets, JSP, and JDBC. The video covers designing the application architecture, integrating various modules, and implementing core functionalities. It highlights best practices for developing a robust, dynamic web application.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/dHbqyB5ARCk"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Hibernate 1:1 & Unidirection Mapping</h2>
+            <p><strong>Understanding Hibernate One-to-One Unidirectional Mapping</strong>
+            
+This video explains Hibernate's one-to-one unidirectional mapping using @OneToOne and @JoinColumn annotations. It demonstrates how to set up and manage relationships between entities, providing practical examples of creating and retrieving linked entities. Essential for mastering entity relationships in Hibernate.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/ZoPdTmbNVYk"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Project P7</h2>
+            <p>we delve into a complete project utilizing all the concepts learned so far, including Hibernate, servlets, JSP, and JDBC. The video covers designing the application architecture, integrating various modules, and implementing core functionalities. It highlights best practices for developing a robust, dynamic web application.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/StIxrSNqwfw"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Hibernate !:M & M:1</h2>
+            <p><strong>Exploring Hibernate One-to-Many and Many-to-One Mappings</strong>
+                This video explores Hibernate's one-to-many and many-to-one mappings, focusing on configuring relationships using annotations like @OneToMany, @ManyToOne, @JoinColumn, and @MappedBy. It covers practical examples of creating, retrieving, and managing related data, ensuring efficient database operations. Essential for understanding entity relationships in Hibernate.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/5VC0QQfD-N0"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Project P8</h2>
+            <p> we delve into a complete project utilizing all the concepts learned so far, including Hibernate, servlets, JSP, and JDBC. The video covers designing the application architecture, integrating various modules, and implementing core functionalities. It highlights best practices for developing a robust, dynamic web application.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/N9ld0qu5uS8"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Hibernate Many to Many</h2>
+            <p>This video covers Hibernate Many-to-Many mapping, demonstrating how to use @ManyToMany and @JoinTable annotations to establish relationships between two entities. It shows how to create, update, and fetch data from both tables, focusing on best practices for handling join tables and managing relationships in Hibernate applications.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/XW2k69DAOw4"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Servlet with Hibernate</h2>
+            <p>The video covers integrating Hibernate with Servlets for data persistence in web applications. It demonstrates configuring Hibernate, creating sessions, and performing CRUD operations within Servlets. Key concepts like session management, transaction handling, and interacting with entities are explained, making it ideal for combining Servlets for request handling and Hibernate for database operations.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/7lcBBRgA5xg"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Spring</h2>
+            <p>The video introduces the Spring Framework, highlighting its core features like Dependency Injection (DI), Inversion of Control (IoC), and the Spring container. It emphasizes how Spring simplifies Java development by promoting loose coupling, improving testability, and supporting modularity. The video also covers key Spring projects like Spring Boot, Spring MVC, and Spring Data, which help streamline the development of enterprise applications.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/9IUQZ_LCnKU"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Project P9</h2>
+            <p>we delve into a complete project utilizing all the concepts learned so far, including Hibernate, servlets, JSP, and JDBC. The video covers designing the application architecture, integrating various modules, and implementing core functionalities. It highlights best practices for developing a robust, dynamic web application.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/IPoL6Y8occQ"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Setter Injection</h2>
+            <p><strong>Setter Injection</strong> in Spring, where dependencies are injected into a class via setter methods after instantiation. This promotes flexibility and decoupling, as dependencies are managed by the Spring container. The video covers how to configure setter injection and compares it with constructor injection, helping developers understand the best use cases for each in Spring applications.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/evPvtchfdDA"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Spring Framework</h2>
+            <p>the <strong>Spring Framework</strong>, highlighting core features like Dependency Injection (DI), Inversion of Control (IoC), and the Spring container. It explains how Spring promotes loose coupling, improves testability, and supports modular development. Key components such as Spring Boot, Spring MVC, and Spring Data are also covered, showcasing how they simplify the creation of enterprise applications. This is crucial for developers wanting to enhance Java development using Spring.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/oqoWRbowzrw"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Spring ORM</h2>
+            <p><strong>Spring ORM</strong>, which simplifies the integration of ORM frameworks like Hibernate and JPA with Spring. It covers how Spring ORM manages database interactions in an object-oriented way, streamlining CRUD operations and transaction handling. The video also explains setting up Spring ORM, configuring ORM frameworks, and handling exceptions, making it ideal for developers integrating ORM tools in Spring applications.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/1agG0qHBJ_o"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Spring MVC</h2>
+            <p><strong>Spring MVC </strong>(Model-View-Controller), a key component of the Spring Framework for building scalable and maintainable web applications. It covers the architecture, where the model handles data, the view manages the UI, and the controller processes user input. The video also highlights important features like DispatcherServlet, controller mapping, and view resolution, showcasing how Spring MVC promotes loose coupling and separation of concerns in web development.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/-0h28eVpNzo"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Soring MVC</h2>
+            <p><strong>Spring MVC </strong> (Model-View-Controller), a key component of the Spring Framework for building scalable and maintainable web applications. It covers the architecture, where the model handles data, the view manages the UI, and the controller processes user input. The video also highlights important features like DispatcherServlet, controller mapping, and view resolution, showcasing how Spring MVC promotes loose coupling and separation of concerns in web development.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/HbOlVD9g8r8"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Spring Boot</h2>
+            <p>
+                Spring Boot simplifies Java application development by offering tools to build production-ready apps with minimal configuration. It features auto-configuration, embedded servers, and starter dependencies, making development faster and easier. Additionally, Spring Boot integrates seamlessly with other Spring projects, ideal for creating microservices and stand-alone applications.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/r1D73OWbzwY"
+         title="Video 1" frameborder="0" allowfullscreen ></iframe>
+        <div class="video-info">
+            <h2>Spring Boot Conclusion</h2>
+            <p>
+                Spring Boot simplifies Java application development by offering tools to build production-ready apps with minimal configuration. It features auto-configuration, embedded servers, and starter dependencies, making development faster and easier. Additionally, Spring Boot integrates seamlessly with other Spring projects, ideal for creating microservices and stand-alone applications.</p>
+        </div>
+    </div>
+</main> 
+    <footer class="footer" >
+        <div class="footer-container" >
+            <!-- Navigation Links -->
+            <div class="footer-nav" >
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                </ul>
+            </div>
+    
+             <!-- Contact Information -->
+        <div class="footer-contact" id="Contact">
+            <h3 >Contact Me</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;font-weight: bold; color: #2e0f47;">
+                Email: 
+                <a href="mailto:shaaikayesha519@gmail.com" 
+                   style="color:#3c096c; text-decoration: none; font-weight: bold;">
+                  shaaikayesha519@gmail.com
+                </a>
+              </p>
+        </div>
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <a href="https://x.com/Ayesha_shaaik"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ayeshashaaik/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom" style="color: #3c096c;">
+            <p>&copy; 2024 Java Full Stack Development.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Development </title>
+    <link rel="icon"  type="image/png" href="logo (1).png"/>
+
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        main {
+            padding: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Video Card Styling */
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            background: #c6cbec;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            text-align: center; /* Center-align text and video */
+        }
+        
+        .video-card iframe {
+            width: 60%; /* Smaller width for the video */
+            height: auto; /* Adjust height proportionally */
+            border-radius: 8px;
+            margin: 0 auto; /* Center the video horizontally */
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        .video-info h2 {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            color: #2e0f47;
+        }
+        .video-info p {
+            font-size: 0.9rem;
+            text-align: justify;
+            color: #5f4f63;
+        }
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .video-card {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .video-card iframe {
+                width: 50%;
+                height: 200px;
+                margin-right: 15px;
+            }
+            .video-info {
+                flex: 1;
+            }
+        }
+    
+
+    .popup-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #c6cbec;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: popup 1s ease-in-out;
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.content {
+    flex: 2;
+    padding: 20px;
+    background-color: #a88fbf;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #2e0f47;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #5f4f63;
+}
+
+@media (max-width: 768px) {
+    .popup-section {
+        flex-direction: column-reverse;
+    }
+
+    .image-container, .content {
+        flex: none;
+        width: 100%;
+    }
+}
+ 
+ </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-brands fa-html5"></i>
+            </div>
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <div class="nav-buttons" >
+                <a href="index.html" id="home">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="course.html"><button class="course-button">Courses</button></a>
+                </div>
+            </div>
+        </nav>
+    </header> 
+
+   
+    <section class="popup-section">
+        <div class="image-container">
+            <img id="popupImage" src="Html & css.webp" alt="Popup Image" />
+        </div>
+        <div class="content">
+            <h1>HTML and CSS Learning</h1>
+            <p>HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are the core building blocks of web development. 
+                HTML provides the basic structure of a webpage, organizing content through tags like headings, paragraphs, links, 
+                and images. It allows developers to define the layout and content of a website, ensuring it is accessible and logically 
+                arranged. On the other hand, CSS is responsible for the visual presentation, adding styles such as colors, fonts, spacing,
+                 and positioning. By separating content and design, CSS enables developers to create aesthetically 
+                pleasing and consistent user experiences across different pages and platforms.</p>
+            <p>Together, HTML and CSS enable the creation of responsive, interactive, and visually engaging websites. HTML defines the 
+                content, while CSS makes it visually appealing, ensuring a positive user experience across devices. With the rise of mobile 
+                browsing, learning how to implement responsive design using CSS is essential. This allows websites to adapt to different screen 
+                sizes, ensuring accessibility and functionality on both large desktops and small mobile screens. Mastering these two technologies forms the
+                 foundation for any web developer looking to build functional, attractive, and accessible websites.</p>
+        </div>
+    </section>
+    
+    <main>  
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/meoXr5QJmTo"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Introduction to HTML </h2>
+                <p><strong>Introduction to Frontend, Backend, Database, and HTML Basics : </strong>
+                     we discuss the core components of web development: frontend (user interface), backend (server-side logic), and database (data storage). We cover essential tools like IDEs, frameworks, and version control systems. The video also introduces HTML, the foundational language for building web pages, highlighting its structure, syntax, and importance in web development.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ezxnyZJ304g"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>HTML Tags</h2>
+                <p> <strong> What is HTML and Using VS Code : </strong>
+                     Introduces HTML's role in structuring web pages and demonstrates using VS Code to write HTML. It covers installing tools for web development and explains basic HTML tags like Heading 1 to Heading 6 , Bold tag, paragraph tag, and preformatted tag with examples to highlight their usage and differences.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/AuYnqeJPDxs"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Multimedia Tags</h2>
+                <p><strong>Exploring HTML Tags, Attributes, and Entities : </strong> 
+                 we delve into various HTML tags and their attributes, including quotes tag, abbreviations tag, subscript tag , superscript tag , italic tag ,images tag , audio tag, and video tag . The video also introduces HTML entities for special characters and demonstrates how to effectively use these tags to enhance web content with practical examples.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/oq1IGnxbUxQ"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Table and List</h2>
+                <p><strong>Understanding HTML Tables</strong>
+                  we explore the table tag in HTML, which is used to create structured data tables. We discuss related tags such as table row tag , table header tag , and table data tag , explaining their roles in building rows, headers, and cells within a table. Various examples are provided to illustrate how to create and style tables effectively.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/HlOU0uFc5bM"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>List Tags & HyperLink </h2>
+                <p><strong>HTML Lists and Hyperlinks Explained </strong>
+                    This video covers HTML lists: ordered , unordered , and description lists, explaining their structure and uses. It also demonstrates hyperlinks using the <a> tag, showing how to link to pages, sections, or external resources with attributes like href, target, and rel.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/MO8hP3N6ARI"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Block level and Inline level elements and From </h2>
+                <p><strong>Hyperlinks, Inline vs Block Elements, and Forms in HTML</strong>
+                    This video explains hyperlinks using the anchor tag, distinguishing between inline elements and block elements , and their differences in layout behavior. It also introduces the form tag, detailing how forms work to collect user input and submit data, with examples of form elements like input tag, button tag, and textarea tag</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/H7SI2MbFCsI"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Forms</h2>
+                <p><strong>HTML Forms with Placeholders and Validation</strong>
+                     we focus on creating forms using the form tag in HTML. We demonstrate how to use placeholders to provide input hints and the required attribute to ensure mandatory fields. Through examples, you’ll learn how to design user-friendly and functional forms with proper validation for collecting user data efficiently.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ODPPwcVA7NE"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>iframe Inline and Internal Elements</h2>
+                <p><Strong>Understanding iframe and Introduction to CSS </Strong>
+                     we explore the iframe tag, which is used to embed external content such as web pages, videos, or maps into a webpage. Additionally, we introduce CSS (Cascading Style Sheets), explaining its purpose in styling HTML elements to enhance the visual appeal and layout of web pages. Through examples, you’ll learn how to use iframes and the basics of applying CSS styles.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/eIm3skVYIhk"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Selectors(basic selectors)</h2>
+                <p><strong>CSS: Internal, External, and Inline Styles</strong>
+                    we discuss the three ways to apply CSS to style web pages: internal styles (within style tags in the HTML document), external styles (using an external CSS file linked via link tag ), and inline styles (directly within an HTML element using the style attribute). We demonstrate how to use CSS properties such as color, font-family, and others to customize the appearance of text and elements, enhancing the page design effectively.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/jmx1PcJf65c"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Pseudo Elements selector, div and span</h2>
+                <p><strong>
+                    CSS Pseudo-elements, Div, and Span Explained</strong>
+                   we explore CSS pseudo-elements like ::before and ::after, which allow you to style specific parts of elements. We also discuss the div tag and span tags in HTML—div tag is used as a block-level container for grouping content, while span tag is an inline container for styling or grouping text. Examples illustrate how to use these elements and selectors to enhance web design and layout effectively.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/gYa6VSeyKUY"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Box Module</h2>
+                <p><strong> CSS Box Model and Creating a Header</strong>
+                   we dive into the CSS Box Model, which consists of margins, borders, padding, and the content area. We explain how these properties work together to define the space and layout of an element on a web page. Additionally, we apply the Box Model concepts to design and style a simple header, showcasing practical implementation and tips for effective layout management.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/vESj1bYi9Vk"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Specificity and Typography</h2>
+                <p><strong>CSS Specificity and Typography Basics</strong>
+                     we explain CSS specificity, the rules that determine which styles are applied to an element when there are conflicts. We cover the specificity hierarchy, from inline styles to IDs, classes, and element selectors. Additionally, we introduce typography in web design, discussing font selection, size, weight, line height, and spacing, with examples to enhance the visual appeal and readability of text on web pages.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/7ID21yC_dMo"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Creating the Github Account and Pushing the Project </h2>
+                <p> we walk through the process of creating a GitHub account and setting up a repository to host your project. We explain the steps to push your local project to GitHub using Git commands, including initializing a repository, committing changes, and pushing to the remote repository. This guide helps you manage version control and collaborate on projects effectively by using GitHub as a platform for storing and sharing code.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/XuVqkrt4SFY"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Inheritance and Card components</h2>
+                <p><Strong>
+                    Understanding Inheritance and Card Components in CSS</Strong>
+                 we explore the concept of inheritance in CSS, explaining how styles applied to parent elements can affect child elements unless explicitly overridden. We demonstrate the practical application of inheritance in designing consistent and efficient styles. Additionally, we create card components, discussing their structure and styling to achieve a clean, reusable design often used for displaying information in web layouts. Examples showcase combining CSS inheritance and card components for effective design.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/IT7IaRIqeJc"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Flex Box</h2>
+                <p><strong>Mastering Flexbox in CSS</strong>
+                    we delve into Flexbox, a powerful layout module in CSS used for creating responsive and flexible designs. We explain key concepts, including the main axis, cross axis, and container properties like display: flex, justify-content, align-items, and flex-wrap. Additionally, we explore child properties such as flex-grow, flex-shrink, and align-self, demonstrating how they control individual item behavior. Through detailed examples, we illustrate how to design layouts like navigation bars, grids, and responsive components using Flexbox.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/7YHqymFRHUg"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Semantic Elements</h2>
+                <p><Strong>Understanding Semantic Elements in HTML</Strong>
+                     we explore semantic elements in HTML, which provide meaningful structure to web pages. We discuss commonly used semantic tags like header tag, footer tag, article tag , section tag , nav tag, and aside tag, explaining their purposes and how they enhance accessibility and SEO. Examples demonstrate how semantic elements improve the clarity and maintainability of HTML code, making it easier for developers and search engines to understand the content.</p>
+            </div>
+        </div>
+    </main>    
+
+        <script src="script.js"></script>
+        <script src="html.js"></script>
+
+        <footer class="footer" >
+            <div class="footer-container" >
+                <!-- Navigation Links -->
+                <div class="footer-nav" >
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <li><a href="course.html">Courses</a></li>
+                    </ul>
+                </div>
+        
+                 <!-- Contact Information -->
+        <div class="footer-contact" id="Contact">
+            <h3 >Contact Me</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;font-weight: bold; color: #3c096c;">
+                Email: 
+                <a href="mailto:shaaikayesha519@gmail.com" 
+                   style=" color:#3c096c; text-decoration: none; font-weight: bold;">
+                  shaaikayesha519@gmail.com
+                </a>
+              </p>
+        </div>
+        
+                <!-- Social Media Links -->
+                <div class="footer-social">
+                    <h3>Follow Me</h3>
+                    <a href="https://x.com/Ayesha_shaaik"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/ayeshashaaik/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        
+            <!-- Copyright -->
+            <div class="footer-bottom" style="color: #3c096c;">
+                <p>&copy; 2024 Java Full Stack Web Development.</p>
+            </div>
+        </footer>
+</body>
+</html>

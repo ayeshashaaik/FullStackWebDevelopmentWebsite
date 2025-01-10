@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Development </title>
+    <link rel="icon"  type="image/png" href="logo (1).png"/>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        main {
+            padding: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Video Card Styling */
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            background-color: #c6cbec;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            text-align: center; /* Center-align text and video */
+        }
+        
+        .video-card iframe {
+            width: 60%; /* Smaller width for the video */
+            height: auto; /* Adjust height proportionally */
+            border-radius: 8px;
+            margin: 0 auto; /* Center the video horizontally */
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        .video-info h2 {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            color: #2e0f47;
+        }
+        .video-info p {
+            font-size: 0.9rem;
+            text-align: justify;
+            color: #5f4f63;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .video-card {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .video-card iframe {
+                width: 50%;
+                height: 200px;
+                margin-right: 15px;
+            }
+            .video-info {
+                flex: 1;
+            }
+        } 
+
+
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #c6cbec;
+    text-align: justify;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+.content h1 {
+    color: #2e0f47;
+}
+.content p {
+    color: #5f4f63;
+}
+.content {
+    max-width: 50%;
+    padding-left: 90px;
+}
+
+.image-container {
+    max-width: 900px;
+    text-align: center; /* Center image for smaller screens */
+}
+
+.animated-image {
+    padding-right: 150px;
+    width: 400px;
+    height: auto;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Animation for the image */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+p {
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content {
+        max-width: 60%;
+        padding-left: 50px;
+    }
+
+    .animated-image {
+        padding-right: 100px;
+        width: 350px; /* Reduce image size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column; /* Stack content vertically */
+        text-align: justify;
+    }
+
+    .content {
+        max-width: 100%;
+        padding-left: 20px;
+        margin-bottom: 20px; /* Add space between text and image */
+    }
+
+    .animated-image {
+        padding-right: 0;
+        width: 300px; /* Further reduce image size */
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding-left: 10px;
+    }
+
+    .animated-image {
+        width: 250px; /* Adjust image size for smaller screens */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjust text size for small screens */
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-brands fa-codepen"></i>
+            </div>
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <div class="nav-buttons" >
+                <a href="index.html" id="home">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="course.html"><button class="course-button">Courses</button></a>
+                </div>
+            </div>
+        </nav>
+    </header> 
+
+    <div class="intro-section">
+        <div class="content">
+            <h1>Java Programming </h1>
+        <p>Welcome to our Java Programming Classes, designed to provide a hands-on learning experience for beginners eager to dive into the world of programming. This website is your 
+            go-to platform for understanding the fundamentals of Java programming, where you'll start with the basics, such as variables, data types, loops, and functions. These core 
+            concepts form the foundation of every Java program you’ll write. As you progress, you’ll delve deeper into object-oriented programming (OOP), learning essential principles 
+            like classes, objects, inheritance, polymorphism, and encapsulation. </p>
+            <p>Our interactive approach ensures you don't just read about programming but actively engage with it by 
+            writing, executing, and testing real Java code. This way, you gain practical experience and develop the skills needed to solve problems effectively through code. Whether you're 
+            starting from scratch with no programming background or refining your existing knowledge, this platform provides a structured, self-paced learning path tailored to meet your 
+            needs.</p>
+            <p> The lessons are designed to be beginner-friendly, with a strong emphasis on building confidence through continuous practice. Along with the basics, you'll gain exposure 
+            to the Java ecosystem, learning how Java integrates with different technologies and applications in real-world scenarios. The website also features coding exercises, challenges, 
+            and projects to help you apply your skills in meaningful ways.</p>
+            <p> By the end of the journey, you'll have a solid understanding of Java programming and the ability to create functional 
+            applications, making this 
+            platform perfect for anyone seeking to enhance their coding abilities or pursue a career in software development. Join us today and start your coding journey with Java!</p>
+        </div>
+        <div class="image-container">
+            <img src="JavaProgramicon.png" alt="Java Programming" class="animated-image">
+        </div>
+    </div>
+
+    <main>  
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/8amA7U6VLM4"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Introduction to Programming</h2>
+                <p><Strong>Introduction to Basic Java Programming: Adding Numbers</Strong>
+                     Introduces the basics of Java programming with a simple program to add two numbers. It explains fundamental concepts like variables, data types, input handling, and performing arithmetic operations. Ideal for beginners looking to get started with Java programming.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/BTKqp9RX1Yw"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>If Else Loop</h2>
+                <p><Strong>Understanding If-Else Statements in Java </Strong>
+                     Explores the concept of If-Else statements in Java, demonstrating how to implement decision-making in programs. It covers syntax, structure, and practical examples to explain conditional logic and branching effectively. A must-watch for beginners to strengthen their Java fundamentals.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/I9d79VAaJ34"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>If Else Continuation</h2>
+                <p><strong>If-Else Continuation: Solving Coding Problems in Java</strong>
+                     Builds on the basics of If-Else statements by solving a real-world coding problem. It focuses on applying conditional logic to practical scenarios, helping you solidify your understanding of branching in Java. Perfect for those aiming to improve problem-solving skills with Java.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/86dMmWEhCcg"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Loops</h2>
+                <p><Strong>
+                    Mastering Loops in Java: Problem-Solving with Programs</Strong>
+                    Dives into loops in Java, including for, while, and do-while loops. It explains their syntax and usage through practical problem-solving examples, helping you understand iterative programming in Java effectively.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/GnwHAn9wn0I"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Loops</h2>
+                <p><Strong>Intermediate Problem-Solving with Loops in Java</Strong>
+                    Explores medium-level coding challenges using loops in Java. It demonstrates how to approach, structure, and solve problems, enhancing your understanding of iterative logic and algorithmic thinking.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/cfUakcHCaUw"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Loops</h2>
+                <p><strong>Deep Dive into Loops in Java Programming</strong>
+                    This video provides an in-depth exploration of loops in Java, covering advanced use cases and practical examples. It highlights how to efficiently use loops to handle complex iterative tasks and optimize your coding solutions.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/BHtiTpN4X2A"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Loop's Continuation</h2>
+                <p><Strong>Advanced Problem Solving with Loops in Java</Strong>
+                   Focuses on enhancing your understanding of loops in Java by tackling more challenging coding problems. It provides insights into applying loops effectively for problem-solving and optimizing code logic.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/lSY-AhutfIE"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Arrays Introduction</h2>
+                <p><strong>Introduction to Arrays in Java</strong>
+                Introduces arrays in Java, covering their purpose, structure, and usage. It explains how to declare, initialize, and access array elements, providing a foundation for understanding this essential data structure.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Mek7awPTIpM"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Arrays Continuation</h2>
+                <p><strong>Exploring Arrays in Java </strong>
+                 DSelves deeper into arrays in Java, discussing advanced concepts like multi-dimensional arrays, iteration techniques, and common operations. It includes practical examples to enhance understanding and problem-solving skills.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/a0g-bo4lWGg"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Product Array, Second Largest Max Pairs and Min Pairs.</h2>
+                <p><strong>Array-Based Problem Solving in Java</strong>
+                     Focuses on solving array-based problems, including finding the product of array elements, identifying the second largest element, and determining max-min pairs. Practical coding examples enhance conceptual clarity and problem-solving techniques.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/-pu8eKAH5Kk"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Arrays Continuation</h2>
+                <p><Strong>Problem-Solving with Arrays in Java </Strong>
+                    This video explores a practical coding problem centered around arrays, providing a step-by-step approach to enhance understanding and implementation skills in Java programming.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/bNA8GQr11A8"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Sorted Array</h2>
+                <p><Strong>Solving Problems on Sorted Arrays in Java</Strong>
+                    This video delves into problem-solving techniques involving sorted arrays, demonstrating efficient approaches and strategies to work with sorted data in Java programming.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/mIrDTh1U6Fc"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Multiple Arrays</h2>
+                <p><strong>Tackling Problems with Multiple Arrays in Java</strong>
+                    This video explores problem-solving techniques involving multiple arrays, showcasing how to handle, manipulate, and analyze data across multiple arrays in Java programming.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Vrdo63FgadI"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Merge 3 Arrays, Subarrays</h2>
+                <p><strong>Solving a Problem on Merging Three Arrays in Java</strong>
+                    Focuses on merging three arrays into one, demonstrating efficient techniques for combining and managing data from multiple arrays in Java programming.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/AzbDsibhDlk"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Subarrays</h2>
+                <p><strong>
+                    Solving Problems on Subarrays in Java</strong>
+                    Delves into subarray concepts, exploring how to identify and solve problems related to subarrays in Java. Practical examples and coding solutions are provided for a clear understanding.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/HPmVsNpnNj4"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Time Complexity</h2>
+                <p><strong>Understanding Time Complexity in Java Programs</strong>
+                    This video introduces the concept of time complexity, explaining how to analyze and evaluate the efficiency of Java programs. It includes examples to demonstrate time complexity calculations for various algorithms.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/MV3J4HRvqwg"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Rearrange the Array</h2>
+                <p><strong>Rearranging Arrays: Exploring Different Problems</strong>
+                    This video focuses on solving various problems related to rearranging arrays in Java. It includes practical examples and coding demonstrations, offering insights into effective approaches for array manipulation.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ie-qP1jb9bg"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Consecutive Subarrays</h2>
+                <p><strong>Solving Consecutive Subarray Problems</strong>
+                    This video delves into programming challenges centered around consecutive subarrays in Java. It provides detailed explanations and solutions, enhancing your understanding of subarray concepts and their practical applications.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/oNXvwe2NC0A"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Consecutive Sub Arrays Continuation</h2>
+                <p><Strong>Advanced Techniques and Problem Solving</Strong>
+                    we continue our exploration of consecutive subarray problems. Building on previous concepts, this session dives deeper into advanced techniques for solving these types of challenges in programming. Through step-by-step explanations and practical examples, we enhance your understanding of consecutive subarrays and their applications in real-world problems.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Izsv29gCKtc"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Strings Intro</h2>
+                <p><strong>Introduction to String Problems: Basic Concepts and Solutions</strong>
+                    we discuss basic string problems in programming. Starting with fundamental concepts, we walk through common string manipulation tasks such as reversing, finding substrings, and checking for palindromes. This video is perfect for beginners looking to build a strong foundation in string-related problems.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ErfFl6akDPk"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Strings</h2>
+                <p><strong>Mastering Strings: In-Depth Exploration and Advanced Techniques</strong>
+                    we take a deeper dive into strings, exploring advanced string operations and techniques. We cover concepts like string searching, pattern matching, string formatting, and more. By examining real-world examples and use cases, this video aims to enhance your understanding of strings and how to efficiently manipulate them in programming.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/bHZcj4-3azk"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>String Manipulation</h2>
+                <p><Strong>String Manipulation: Techniques and Problem Solving</Strong>
+                    we explore various string manipulation techniques in programming. We cover tasks like concatenation, splitting, replacing characters, and transforming strings. Through practical examples, this video will help you master the art of string manipulation and equip you with the skills needed to tackle string-related problems efficiently.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/y2KuShKLAUs"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>String Manipulation Continuation</h2>
+                <p>In this continuation of our string manipulation series, we dive deeper into more complex string operations. This video covers advanced techniques like string reversal, pattern matching, and handling edge cases. Through detailed examples, you'll learn how to manipulate strings more effectively and solve challenging string problems in programming.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/irwABoXP5pc"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>SubStrings</h2>
+                <p><Strong>Introduction to Substrings: </Strong>
+                    we introduce the concept of substrings in programming. We explore how to extract substrings, the different methods for handling them, and their practical applications. This video is ideal for beginners looking to understand the fundamentals of working with substrings and how they fit into various problem-solving scenarios.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/EAmGMzzLKzE"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>SubStrings</h2>
+                <p>we take a closer look at substrings in programming, covering more advanced techniques and applications. From efficient substring extraction methods to handling complex string problems, this video provides a deeper understanding of substrings and how to use them effectively in various programming challenges.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/GcdA6haxCAg"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>SubStrings to Arrays</h2>
+                <p> we explore problems that involve converting substrings into arrays. We discuss different approaches to extract substrings and efficiently convert them into array structures. Through practical examples, you will learn how to handle such conversions and tackle related programming challenges with ease.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/WvrULsoFe4U"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Introduction to Set </h2>
+                <p><strong>Solving Programming Problems with Sets:</strong>
+                    we explore programming problems centered around the concept of sets. We discuss the core principles of sets, their properties, and how to efficiently use them in problem-solving. Through various examples, we demonstrate how sets can be leveraged to solve challenges involving uniqueness, intersection, and set operations.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ppanAOPNwiE"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Programs on set map</h2>
+                <p><strong>Set and Map in Programming:</strong>
+                    we delve into the use of sets and maps in programming. We explore their fundamental concepts, differences, and real-world applications. Through hands-on coding examples, you’ll learn how to implement and manipulate sets and maps to solve complex problems efficiently.
+                </p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/knog1MyGqgw"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Programs on set map</h2>
+                <p><strong>Set and Map in Programming:</strong>
+                    we delve into the use of sets and maps in programming. We explore their fundamental concepts, differences, and real-world applications. Through hands-on coding examples, you’ll learn how to implement and manipulate sets and maps to solve complex problems efficiently.
+                </p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/_oFLzxdBGzg"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Programs on set map</h2>
+                <p><strong>Set and Map in Programming:</strong>
+                    we delve into the use of sets and maps in programming. We explore their fundamental concepts, differences, and real-world applications. Through hands-on coding examples, you’ll learn how to implement and manipulate sets and maps to solve complex problems efficiently.
+                </p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/zxFkaT7HUwE"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Encrypt String </h2>
+                <p>we discuss how to encrypt strings using various encryption techniques in programming. We cover fundamental concepts of string encryption, common algorithms, and step-by-step implementations. Through practical examples, you'll learn how to securely encrypt and decrypt strings in your programs.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/xH9tpn6I0c4"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>SubArrays</h2>
+                <p>we explore programming problems centered around subarrays. We discuss key concepts related to subarrays and provide practical coding examples to demonstrate how to solve different types of subarray problems. This video will help you understand how to efficiently manipulate and work with subarrays in various programming challenges.</p>
+            </div>
+        </div>
+</main>
+
+
+    <footer class="footer" >
+        <div class="footer-container" >
+            <!-- Navigation Links -->
+            <div class="footer-nav" >
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                </ul>
+            </div>
+    
+              <!-- Contact Information -->
+        <div class="footer-contact" id="Contact">
+            <h3 >Contact Me</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;font-weight: bold; color: #3c096c;">
+                Email: 
+                <a href="mailto:shaaikayesha519@gmail.com" 
+                   style="color:#3c096c; text-decoration: none; font-weight: bold;">
+                  shaaikayesha519@gmail.com
+                </a>
+              </p>
+        </div>
+    
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <a href="https://x.com/Ayesha_shaaik"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ayeshashaaik/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom" style="color: #3c096c;">
+            <p>&copy; Java Full Stack Development.</p>
+        </div>
+    </footer>
+    
+        <script src="script.js"></script>
+</body>
+</html>

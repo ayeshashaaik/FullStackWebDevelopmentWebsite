@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Development </title>
+    <link rel="icon"  type="image/png" href="logo (1).png"/>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   
+    
+    <style>
+/* Base styles */
+.about-section1 {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #c6cbec;
+    width: fit-content;
+}
+
+/* .about-section1 h1 {
+    font-size: 2.5rem;
+    color: #ff5722;
+    margin-bottom: 10px;
+} */
+
+.about-section1 h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #2e0f47;
+}
+
+.about-section1 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #5f4f63;
+}
+
+.about-image1 img {
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.highlights {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+    color: #5f4f63;
+}
+
+.highlights li {
+    font-size: 1rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.highlights li::before {
+    content: '✔';
+    color: #4b1535;
+    font-size: 1.2rem;
+}
+
+.highlights strong {
+    color: #2e0f47;
+    font-weight: bold;
+}
+
+.about-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #c6cbec;
+    gap: 20px;
+    margin-top: 40px;
+}
+.about-content h2 {
+    color: #2e0f47;
+}
+.about-content p {
+    color: #5f4f63;
+}
+.about-content {
+    max-width: 50%;
+    padding: 20px;
+    line-height: 1.8; 
+}
+
+.about-image2 img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+
+}
+
+/* .showcase-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+} */
+
+/* .showcase-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+} */
+
+/* .showcase-item {
+    width: 180px;
+    text-align: center;
+} */
+
+/* .showcase-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+} */
+
+/* .showcase-item img:hover {
+    transform: scale(1.05);
+} */
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .about-section2 {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .about-content {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .about-image2 img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section1 h1 {
+        font-size: 2rem;
+    }
+
+    .about-section1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section1 p {
+        font-size: 0.9rem;
+    }
+
+    .showcase-item {
+        width: 150px; /* Smaller showcase items */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section1 h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-section1 h2 {
+        font-size: 1.2rem;
+    }
+
+    .about-section2 {
+        padding: 10px;
+    }
+
+    /* .showcase-item {
+        width: 120px; 
+    }
+
+    .showcase-gallery {
+        gap: 10px; 
+    } */
+}
+
+/* Initial state for images */
+.about-image1, .about-image2 {
+    opacity: 0;
+    transform: translateX(-100px); /* Off-screen initially */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Final state when images slide in */
+.about-image1.visible, .about-image2.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide into position */
+}
+
+
+@media (max-width: 768px) {
+    .about-image1, .about-image2 {
+        transform: translateX(0); /* No need for large sliding on smaller screens */
+    }
+}
+
+.two-column-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap for smaller screens */
+    align-items: flex-start;
+    gap: 20px; /* Space between columns */
+    padding: 20px;
+    background-color: #c6cbec;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    max-width: fit-content;
+    /* max-width: 1200px; */
+}
+.content-left h2 {
+    color: #2e0f47;
+}
+.content-left {
+    flex: 3; /* Larger portion for the main content */
+    min-width: 300px; /* Ensure a minimum width for small screens */
+    color: #5f4f63;
+}
+
+.content-right {
+    flex: 2;
+    display: flex;
+    align-items: flex-start; /* Adjust to start positioning */
+    justify-content: center;
+    background-color: #a88fbf;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    padding-top: 200px; 
+    padding-bottom: 200px;
+    width: fit-content;
+}
+
+.content-right .closing {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.section-heading {
+    font-size: 2rem;
+    margin-bottom: 15px;
+   
+}
+
+.intro-paragraph,
+.description {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.description i {
+    color: #2e0f47; /* Icon color (orange as an example, customizable) */
+    margin-right: 8px; /* Space between the icon and the text */
+}
+
+.benefits-list i {
+    color: #2e0f47;      /* Icon color (customizable) */
+    margin-right: 10px;  /* Space between icon and text */
+    font-size: 18px;     /* Slightly larger icon size */
+}
+
+   
+  /* Responsive adjustments */
+@media (max-width: 1024px) {
+    .two-column-section {
+        gap: 15px; /* Reduce gap for medium screens */
+    }
+
+    .section-heading {
+        font-size: 1.8rem; /* Slightly smaller heading */
+    }
+
+    .intro-paragraph,
+    .description {
+        font-size: 0.95rem; /* Adjust font size for readability */
+    }
+
+    .content-right {
+        padding: 20px 10px; /* Reduce padding for medium screens */
+    }
+
+    .content-right .closing {
+        font-size: 1.1rem; /* Adjust closing text size */
+    }
+}
+
+@media (max-width: 768px) {
+    .two-column-section {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .content-left,
+    .content-right {
+        flex: 1; /* Equal width for stacked layout */
+        width: 100%; /* Full width */
+        margin: 0 auto; /* Center content */
+    }
+
+    .content-right {
+        padding: 15px;
+        padding-top: 100px; /* Reduce excessive padding for small screens */
+        padding-bottom: 100px;
+    }
+
+    .section-heading {
+        font-size: 1.5rem; /* Smaller heading size */
+    }
+
+    .intro-paragraph,
+    .description {
+        font-size: 0.9rem; /* Reduce text size */
+    }
+
+    .benefits-list li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .two-column-section {
+        padding: 10px; /* Reduce overall padding for small devices */
+        gap: 10px; /* Smaller gap between elements */
+    }
+
+    .content-right {
+        padding: 10px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .section-heading {
+        font-size: 1.3rem; /* Adjust heading size for small screens */
+    }
+
+    .intro-paragraph,
+    .description {
+        font-size: 0.85rem; /* Smaller font size */
+    }
+
+    .benefits-list li {
+        font-size: 0.85rem;
+    }
+
+    .content-right .closing {
+        font-size: 1rem; /* Adjust closing text size */
+    }
+}  
+
+   </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-address-card"></i>
+            </div>
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <div class="nav-buttons" >
+                <a href="index.html" id="home">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="course.html"><button class="course-button">Courses</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+        
+        
+<main>
+
+    <section class="about-section1">
+        <!-- <h1>About</h1> -->
+        <h2>Welcome to my Java Full Stack Development learning hub!</h2>
+        <p>This website is a one-stop destination for anyone passionate about web and software development. 
+           Here, you’ll find carefully selected resources, videos, and tutorials covering key technologies 
+           required to excel as a Full Stack Developer:
+        </p>
+        <div class="about-image1">
+            <img src="Learning Hub.jpg" alt="Learning Hub" />
+        </div>
+        </div>
+        <div class="highlights">
+          <ul >
+              <li><strong>Java & Advanced Java:</strong> Deep dive into object-oriented programming, frameworks, 
+                and advanced backend techniques.
+            </li>
+            <li><strong>MySQL:</strong> Learn how to design, query, and manage databases effectively.</li>
+            <li><strong>HTML & CSS:</strong> Master the art of creating elegant, responsive, and user-friendly websites.</li>
+                <li><strong>JavaScript:</strong> Enhance your applications with interactivity and dynamic functionality.</li>
+        </ul>
+        </div>
+    </section>
+
+
+
+
+
+        <section class="about-section2">
+            <div class="about-content">
+                <h2>Who I Am</h2>
+                <p>
+                    I am dedicated to delivering high-quality learning resources for aspiring developers. 
+                    My mission is to empower individuals with the skills they need to succeed in their tech careers. 
+                    From JavaScript to Full Stack Development,
+                     this platform offers comprehensive guides and engaging videos tailored for every skill level.
+                </p>
+                <p>
+                    I believe in the power of education and technology to transform lives. Through this website, 
+                    I strive to continuously innovate and update the content to stay ahead in the ever-evolving tech industry. 
+                    Every resource here is a result of my dedication, learning journey, 
+                    and passion for helping others achieve their goals in the field of development.
+                </p>
+            </div>
+            <div class="about-image2">
+                <img src="who i  am.png" alt="About Us" />
+            </div>
+        </section>
+
+        <section id="why-website" class="two-column-section">
+            <div class="content-left">
+                <h2 class="section-heading">Why This Website?</h2>
+                <p class="intro-paragraph">
+                    As a passionate learner and a recent B.Tech graduate, I embarked on this project to 
+                    strengthen my knowledge and share it with the developer community. Every resource on 
+                    this platform reflects my journey of learning and discovery, from mastering fundamental 
+                    concepts to building real-world projects.
+                </p>
+                <p class="description">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                    Creating this website has been a transformative experience for me. It allowed me to: 
+                </p>
+                <ul class="benefits-list">
+                    <li>
+                        <i class="fa-solid fa-caret-right"></i>
+                        Explore new technologies and refine my coding skills.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-caret-right"></i>
+                        Understand the intricacies of front-end and back-end integration.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-caret-right"></i>
+                        Develop problem-solving abilities and adapt to challenges.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-caret-right"></i>
+                        Build a solid foundation for a career in Full Stack Development.
+                    </li>
+                </ul>
+                
+                <p class="description">
+                    Whether you’re starting from scratch or looking to enhance your expertise, this platform 
+                    is designed to guide you through every step of the Full Stack journey. With a combination 
+                    of videos, examples, and hands-on resources, I aim to make learning engaging, practical, and rewarding.
+                </p>
+            </div>
+            <div class="content-right ">
+                <p class="closing" id="quote">
+                    Let’s learn, grow, and build amazing things together. Feel free to explore, and don’t hesitate 
+                    to reach out with your thoughts or questions.
+                </p>
+            </div>
+        </section>
+        
+    </main>
+
+
+
+    <footer class="footer" >
+        <div class="footer-container" >
+            <!-- Navigation Links -->
+            <div class="footer-nav" >
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                </ul>
+            </div>
+    
+              <!-- Contact Information -->
+        <div class="footer-contact" id="Contact">
+            <h3 >Contact Me</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;font-weight: bold; color: #3c096c;">
+                Email: 
+                <a href="mailto:shaaikayesha519@gmail.com" 
+                   style="color:#3c096c; text-decoration: none; font-weight: bold;">
+                  shaaikayesha519@gmail.com
+                </a>
+              </p>
+        </div>
+    
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <a href="https://x.com/Ayesha_shaaik"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ayeshashaaik/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom" style="color: #3c096c;">
+            <p>&copy; 2024 Java Full Stack Web Developement.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+    <script>
+       // Function to check if an element is in the viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+// Function to handle scroll event and add the "visible" class to the elements when they are in the viewport
+function handleScroll() {
+    const images = document.querySelectorAll('.about-image1, .about-image2');
+    
+    images.forEach((image) => {
+        if (isElementInViewport(image)) {
+            image.classList.add('visible');
+        }
+    });
+}
+
+// Listen for the scroll event
+window.addEventListener('scroll', handleScroll);
+
+// Trigger the scroll handler on initial load to check if the images are already in view
+handleScroll();
+
+
+    </script>
+
+</body>
+</html>

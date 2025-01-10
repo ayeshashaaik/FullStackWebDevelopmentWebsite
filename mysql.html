@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Web Development </title>
+    <link rel="icon"  type="image/png" href="logo (1).png"/>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        main {
+            padding: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        
+        /* Video Card Styling */
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            background: #c6cbec;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            text-align: center; /* Center-align text and video */
+        }
+        
+        .video-card iframe {
+            width: 60%; /* Smaller width for the video */
+            height: auto; /* Adjust height proportionally */
+            border-radius: 8px;
+            margin: 0 auto; /* Center the video horizontally */
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        .video-info h2 {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            color: #2e0f47;
+        }
+        .video-info p {
+            font-size: 0.9rem;
+            text-align: justify;
+            color: #5f4f63;
+        }
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .video-card {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .video-card iframe {
+                width: 50%;
+                height: 200px;
+                margin-right: 15px;
+            }
+            .video-info {
+                flex: 1;
+            }
+        }
+
+.content-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #c6cbec;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 1200px; /* Set the maximum width */
+  margin: 0 auto; /* Center the section within the parent container */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+.text-content {
+  max-width: 50%;
+  
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2e0f47;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  color: #5f4f63;
+}
+
+.image-content {
+  max-width: 40%;
+  text-align: center; /* Center images on smaller screens */
+}
+
+   
+.animated-image {
+  width: 450px; 
+  height: 450px; 
+  object-fit: cover; 
+  border-radius: 10px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.animated-image:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .text-content {
+    max-width: 60%;
+  }
+
+  .animated-image {
+    width: 350px; /* Reduce image size for medium screens */
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+    margin: 0 0 20px; /* Add spacing between content and image */
+  }
+
+  .image-content {
+    max-width: 100%;
+  }
+
+  .animated-image {
+    width: 300px; /* Further reduce image size */
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h1 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .text-content p {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+
+  .animated-image {
+    width: 250px; /* Adjust image size for small screens */
+    height: 250px;
+  }
+}
+     
+     </style>
+</head>
+<body>
+ <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-database"></i>
+            </div>
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <div class="nav-buttons" >
+                <a href="index.html" id="home">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="course.html"><button class="course-button">Courses</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>    
+
+    <section class="content-section">
+        <div class="text-content">
+          <h1>Comprehensive MySQL Learning Hub</h1>
+          <p>
+            Welcome to your ultimate MySQL resource! This website is a carefully curated collection of video tutorials designed to guide learners through every essential concept of MySQL. Starting with an introduction to MySQL and Entity-Relationship (ER) diagrams, we delve into converting ER models to relational schemas, exploring data types, constraints, and composite primary keys.</p>
+            <p>
+            Master commands like ALTER and DML, understand auto-increment, and sharpen your query skills with operators (LIKE, logical, and comparison). Dive deep into functions including string, math, and date functions, while mastering comparison and control flow techniques. Advanced topics like window functions, aggregate functions, LIMIT and OFFSET, GROUP BY and HAVING clauses, subqueries, joins, indexes, views, stored procedures, triggers, and normalization are all covered to ensure a holistic understanding.
+            </p><p>
+            With each video offering focused content and practical insights, this website equips students and professionals to confidently navigate and harness the power of MySQL in real-world applications.
+          </p>
+        </div>
+        <div class="image-content">
+          <img src="MYSQL.webp" alt="Creative Design" class="animated-image">
+        </div>
+      </section>
+
+    <main>  
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/iw8nx9JeJT4"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Introduction to SQL</h2>
+                <p><strong>Introduction to SQL </strong>
+                we introduce SQL (Structured Query Language), the standard language used to manage and manipulate relational databases. We explain its core purpose in interacting with databases to store, retrieve, update, and delete data. The video covers basic SQL concepts such as databases, tables, rows, and columns, and provides an overview of common SQL operations, including SELECT, INSERT, UPDATE, and DELETE. Additionally, we discuss the importance of SQL in web development, data analysis, and business intelligence, highlighting its role in managing structured data efficiently.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/DBVLtLT0tlY"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>ER Diagram</h2>
+                <p><strong>ER Diagrams in Database Design</strong>
+                we introduce Entity-Relationship (ER) Diagrams, a tool used to visually represent the structure of a database. We explain key components such as entities, relationships, and attributes, and show how these elements are depicted using symbols like rectangles, diamonds, and ovals. The video also covers different types of relationships, including one-to-one, one-to-many, and many-to-many, and how ER diagrams help in organizing and designing databases effectively.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/wu0vWwmNgEI"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>ER Diagram </h2>
+                <p><strong>ER Diagrams in Database Design</strong>
+                    we introduce Entity-Relationship (ER) Diagrams, a tool used to visually represent the structure of a database. We explain key components such as entities, relationships, and attributes, and show how these elements are depicted using symbols like rectangles, diamonds, and ovals. The video also covers different types of relationships, including one-to-one, one-to-many, and many-to-many, and how ER diagrams help in organizing and designing databases effectively.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/mFxBXD96uv8"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Converting ER Model to Relational Schema</h2>
+                <p><Strong>Converting ER Model to Relational Schema </Strong>
+
+                    This video explains the process of converting an Entity-Relationship (ER) model into a relational schema. It covers mapping entities, relationships, and attributes to tables, columns, and keys, including handling one-to-one, one-to-many, and many-to-many relationships. The video also demonstrates how to define primary and foreign keys to maintain data integrity.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/lZQy-eqE494"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Data Types and Constraint</h2>
+                <p><strong>Data Types and Constraints in SQL</strong>
+
+                we explore SQL data types and constraints. We discuss various data types like INT, VARCHAR, DATE, and BOOLEAN, explaining when and how to use each for different types of data. The video also covers constraints such as NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, and CHECK, which help enforce data integrity and ensure accurate data storage. Examples demonstrate how to apply these data types and constraints when creating tables in SQL.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/CbSIImQ1uEE"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Constraints, Composite primary Key</h2>
+                <p><strong>Constraints and Composite Primary Key in SQL</strong>
+
+                    we discuss SQL constraints in detail, including how they enforce rules on the data in a table. We explain various constraints like NOT NULL, UNIQUE, and CHECK, along with their importance in maintaining data integrity. The video also introduces the concept of a composite primary key, which is a primary key made up of multiple columns to uniquely identify records in a table. We provide examples to demonstrate how to define and use composite primary keys in SQL.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/oelYJrh3vcE"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Auto Increment & Alter Command</h2>
+                <p><Strong>Auto Increment and ALTER Command in SQL</Strong>
+
+                    This video explains the AUTO_INCREMENT attribute in SQL, used to automatically generate unique values for primary key columns. It also covers the ALTER command, which modifies table structures by adding, modifying, or deleting columns. Examples illustrate how to use these features effectively in SQL.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/u7BFN7CQES0"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>DML Commands and Arithmetic Operators</h2>
+                <p>
+                    <strong>DML Commands and Arithmetic Operators in SQL</strong>
+                    
+                 we discuss the Data Manipulation Language (DML) commands in SQL, which include SELECT, INSERT, UPDATE, and DELETE, and their roles in managing data within a database. We also cover arithmetic operators, such as addition, subtraction, multiplication, division, and modulus, and demonstrate how to use them in SQL queries to perform calculations and manipulate data.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/LPsY1UgX0zI"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Comparison and Logical Operators Queries</h2>
+                <p><Strong>Comparison and Logical Operators in SQL Queries</Strong>
+
+                    we explore the use of comparison and logical operators in SQL queries. We explain how comparison operators such as =, !=, <, >, <=, and >= are used to filter data based on conditions. We also cover logical operators like AND, OR, and NOT, which allow you to combine multiple conditions in a query. Through examples, we demonstrate how to effectively use these operators to retrieve specific data from a database based on complex conditions.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/9KDg7UOq2P0"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Like Operator</h2>
+                <p><Strong>LIKE Operator in SQL</Strong>
+
+                    we discuss the LIKE operator in SQL, which is used to search for a specified pattern in a column. We explain how it can be used with wildcard characters like % (for any sequence of characters) and _ (for a single character) to perform flexible searches. Through examples, we demonstrate how to use the LIKE operator to filter data based on patterns in text fields, helping to efficiently retrieve records that match specific conditions.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/jfNaoWDnlBc"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Regular Expression</h2>
+                <p><Strong>Regular Expressions in SQL</Strong>
+
+                    we introduce Regular Expressions (RegEx) in SQL, which allow for more advanced pattern matching and text searching. We explain how to use RegEx to perform complex queries by specifying patterns for strings in SQL queries. The video covers how Regular Expressions differ from the LIKE operator and demonstrates the use of different RegEx patterns and operators, such as ^, $, [], and |, to find, match, and manipulate text data within database columns.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/JpnqKHwb2CM"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>String & Math functions</h2>
+                <p><Strong>String and Math Functions in SQL</Strong>
+
+                    we explore commonly used string and math functions in SQL. We cover string functions like CONCAT(), SUBSTRING(), UPPER(), LOWER(), and TRIM(), which help manipulate and format text data in queries. The video also dives into mathematical functions such as ROUND(), FLOOR(), CEIL(), and ABS(), which allow for performing calculations and rounding operations. Examples illustrate how these functions can be used to efficiently handle and manipulate data in SQL queries.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/gXt9BHgECNA"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Data Functions</h2>
+                <p><Strong>Data Functions in SQL</Strong>
+
+                   we focus on various data functions in SQL, which are used to manipulate and extract information from date and time data types. We cover functions like CURDATE(), NOW(), DATE(), YEAR(), MONTH(), DAY(), and DATE_ADD(), which allow users to retrieve, modify, or perform calculations on date and time values. Through examples, we demonstrate how these functions help in filtering, sorting, and calculating dates in SQL queries, enabling efficient management of time-based data.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/IcggE2T3eHE"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Comparsion, Control Flow, Window function </h2>
+                <p><strong>Comparison, Control Flow, and Window Functions in SQL</strong>
+
+                    This video covers comparison operators (=, !=, >, etc.), control flow statements (IF, CASE, COALESCE), and window functions (ROW_NUMBER(), RANK(), etc.) in SQL. Comparison operators help compare values, control flow statements enable conditional logic, and window functions allow advanced data analysis by performing calculations over a set of rows. These concepts enhance SQL query flexibility and power.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/mZPn6cO2qfQ"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Aggregate Function Limit and Offset</h2>
+                <p>
+                    <Strong>Aggregate Functions, Limit, and Offset in SQL</Strong>
+                    
+                     we discuss aggregate functions in SQL, such as COUNT(), SUM(), AVG(), MIN(), and MAX(), which allow you to perform calculations on data. We also cover the LIMIT and OFFSET clauses, which are used to restrict the number of rows returned by a query and to skip a specific number of rows, respectively. These concepts are essential for efficient data analysis and controlling the result set of SQL queries.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/PBgXo27Bsm0"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Group by and Having Clause</h2>
+                <p><strong>GROUP BY and HAVING Clause in SQL</strong>
+
+                   we explore the GROUP BY and HAVING clauses in SQL. The GROUP BY clause is used to group rows that have the same values in specified columns, often used with aggregate functions to summarize data. The HAVING clause allows you to filter groups based on aggregate function results, providing more control over grouped data. Examples are provided to demonstrate how to effectively use both clauses in SQL queries for data analysis and reporting.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/sP5UL5U2-KA"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Subqueries</h2>
+                <p>
+                    <Strong>Subqueries in SQL</Strong>
+                    
+                    we discuss subqueries in SQL, which are queries embedded within another query. We explain how subqueries can be used in SELECT, INSERT, UPDATE, and DELETE statements, allowing for more complex and flexible data retrieval. The video highlights the two types of subqueries: scalar (returns a single value) and table (returns a table of results). Through examples, we demonstrate how to use subqueries to filter data, perform calculations, and manage multiple queries in a single statement.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/2GPBn0vthrA"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Joins</h2>
+                <p><strong>Joins in SQL</strong>
+                    
+                     we explain the concept of joins in SQL, which allow you to combine data from two or more tables based on a related column. We cover the different types of joins: INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN, explaining how each works and when to use them. The video provides examples of each join type, showing how they help retrieve related data from multiple tables efficiently. Additionally, we discuss the importance of understanding joins for complex database queries and data relationships.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/lXeQfqSUatw"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Joins & Index</h2>
+                <p><strong>
+                    Joins and Indexes in SQL</strong>
+                    
+                     we cover SQL joins (INNER, LEFT, RIGHT, and FULL) used to combine data from multiple tables. We also explain SQL indexes, which enhance query performance by providing faster data retrieval. The video demonstrates the use of joins and indexes, highlighting their benefits and potential trade-offs, such as increased maintenance overhead during data updates.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ENPF7yHFI60"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>View, Sorted Procedure and Triggers</h2>
+                <p><Strong>Views, Stored Procedures, and Triggers in SQL</Strong>
+
+                     we cover Views, Stored Procedures, and Triggers in SQL. Views are virtual tables simplifying complex queries, Stored Procedures are reusable SQL queries that improve performance, and Triggers automatically execute in response to certain database events. We explain how to create and use these features to enhance database management and automation.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/9FNZBch3wVY"
+             title="Video 1" frameborder="0" allowfullscreen ></iframe>
+            <div class="video-info">
+                <h2>Tiggers & Normalization</h2>
+                <p><Strong>Triggers and Normalization in SQL</Strong>
+
+                   we explore Triggers and the concept of Normalization in SQL. Triggers are automatic actions that occur in response to specific events on a database table, such as INSERT, UPDATE, or DELETE operations. We also discuss Normalization, a process used to organize database tables to reduce redundancy and dependency, ensuring data integrity. The video demonstrates how to implement triggers and apply different normalization forms to optimize database structure.</p>
+            </div>
+        </div>
+
+    
+    </main>
+    <footer class="footer" >
+        <div class="footer-container" >
+            <!-- Navigation Links -->
+            <div class="footer-nav" >
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Information -->
+        <div class="footer-contact" id="Contact">
+            <h3 >Contact Me</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;font-weight: bold; color: #3c096c;">
+                Email: 
+                <a href="mailto:shaaikayesha519@gmail.com" 
+                   style=" color:#3c096c; text-decoration: none; font-weight: bold;">
+                  shaaikayesha519@gmail.com
+                </a>
+              </p>
+        </div>
+    
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <a href="https://x.com/Ayesha_shaaik"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ayeshashaaik/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom" style="color: #3c096c;">
+            <p>&copy; 2024 Java Full Stack Development.</p>
+        </div>
+    </footer>
+    
+        <script src="script.js"></script>
+</body>
+</html>
